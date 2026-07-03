@@ -419,13 +419,10 @@
     html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
     html = html.replace(/^---$/gm, '<hr>')
     html = html.replace(/^[\-\*] (.+)$/gm, '<li>$1</li>')
-    html = html.replace(/
-
-/g, '</p><p>')
+    html = html.replace(/\n\n/g, '</p><p>')
     html = '<p>' + html + '</p>'
     html = html.replace(/<p><\/p>/g, '')
-    html = html.replace(/
-/g, '<br>')
+    html = html.replace(/\n/g, '<br>')
     return html
   }
 
