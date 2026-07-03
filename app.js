@@ -17,6 +17,7 @@
   const btnPptx     = document.getElementById('btnPptx')
   const prefaceNav  = document.getElementById('prefaceNav')
   const notifyNav   = document.getElementById('notifyNav')
+  const reviewNav   = document.getElementById('reviewNav')
   const updateLog   = document.getElementById('updateLog')
   const sidebarGif  = document.getElementById('sidebarGif')
   const backToTop   = document.getElementById('backToTop')
@@ -210,17 +211,17 @@
         toggleFolder(path)
       }
       // 如果笔记有可预览/下载的内容，同时选中
-      if (node.pdf || node.one) {
+      if (node.pdf || node.one || node.md) {
         selectNote(node)
         if (window.innerWidth <= 768) closeSidebar()
       }
     })
 
     // 高亮激活行
-    if (!isExpandable && activePath === node.pdf) {
+    if (activePath && !isExpandable && activePath === node.pdf) {
       row.classList.add('active')
     }
-    if (hasKids && activePath === (node.one || node.pdf)) {
+    if (activePath && hasKids && activePath === (node.one || node.pdf)) {
       row.classList.add('active')
     }
 
@@ -355,7 +356,7 @@
 
   // --- 选中笔记 ---
   function selectNote (node) {
-    activePath = node.pdf || null
+    activePath = node.pdf || node.md || node.one || null
     noteTitle.textContent = node.name
 
     // 下载按钮 (.one)
@@ -529,7 +530,22 @@
   })()
 
   // --- 启动 ---
-  // 侧边栏「序言」→ 切换文字面板
+  // 侧边栏「学期回顾」→ 跳转到树中的学期回顾
+  reviewNav.addEventListener('click', function () {
+    expandedPaths.add('学期回顾')
+    renderTree(searchEl.value)
+    setTimeout(() => {
+      const rows = treeEl.querySelectorAll('.tree-row')
+      for (const r of rows) {
+        if (r.querySelector('.label')?.textContent === '学期回顾') {
+          r.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          break
+        }
+      }
+    }, 100)
+    if (window.innerWidth <= 768) closeSidebar()
+  })
+
   // 侧边栏「通知」→ 切换更新日志（互斥：关闭序言）
   notifyNav.addEventListener('click', function () {
     if (activePath) resetToWelcome()
