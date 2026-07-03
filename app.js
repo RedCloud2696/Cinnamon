@@ -403,6 +403,7 @@
 
   // --- 简易 Markdown 解析 ---
   function parseMarkdown (md) {
+    if (!md.trim()) return '<p style="color:#C0B0B0">暂无内容，等待作者填写…</p>'
     let html = md
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     html = html.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
