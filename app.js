@@ -376,18 +376,56 @@
       btnPptx.style.display = 'none'
     }
 
-    // PDF 预览
-    if (node.pdf) {
+    // Markdown 预览
+    if (node.md) {
+      pdfViewer.innerHTML = '<div class="md-loading">加载中…</div>'
+      fetch(node.md)
+        .then(r => r.text())
+        .then(text => {
+          const html = parseMarkdown(text)
+          pdfViewer.innerHTML = `<div class="md-preview">${html}</div>`
+        })
+        .catch(() => {
+          pdfViewer.innerHTML = '<div class="welcome-placeholder"><p>加载失败</p></div>'
+        })
+    } else if (node.pdf) {
       pdfViewer.innerHTML = `<iframe src="${node.pdf}#toolbar=1&navpanes=0"
         title="${node.name}" allowfullscreen></iframe>`
     } else {
       pdfViewer.innerHTML = `
         <div class="welcome-placeholder">
-          <p>该笔记没有 PDF 文件<br><small style="color:#D0C0C0;">仅有下载</small></p>
+          <p>该笔记没有可预览内容<br><small style="color:#D0C0C0;">仅可下载</small></p>
         </div>`
     }
 
     renderTree(searchEl.value)
+  }
+
+  // --- 简易 Markdown 解析 ---
+  function parseMarkdown (md) {
+    let html = md
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    html = html.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
+    html = html.replace(/`([^`]+)`/g, '<code>$1</code>')
+    html = html.replace(/^#### (.+)$/gm, '<h4>$1</h4>')
+    html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>')
+    html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
+    html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    html = html.replace(/\*(.+?)\*/g, '<em>$1</em>')
+    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">')
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
+    html = html.replace(/^---$/gm, '<hr>')
+    html = html.replace(/^[\-\*] (.+)$/gm, '<li>$1</li>')
+    html = html.replace(/
+
+/g, '</p><p>')
+    html = '<p>' + html + '</p>'
+    html = html.replace(/<p><\/p>/g, '')
+    html = html.replace(/
+/g, '<br>')
+    return html
   }
 
   // --- 搜索 ---
