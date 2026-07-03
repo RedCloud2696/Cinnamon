@@ -28,11 +28,21 @@ function scanDir (dirPath) {
     if (IGNORE.has(e.name) || e.name.startsWith('.')) continue
     if (e.isDirectory()) {
       const children = scanDir(path.join(dirPath, e.name))
+      // 检查子文件夹是否有自定义图标
+      let icon = undefined
+      const subIndex = path.join(dirPath, e.name, 'index.json')
+      if (fs.existsSync(subIndex)) {
+        try {
+          const cfg = JSON.parse(fs.readFileSync(subIndex, 'utf-8'))
+          if (cfg.icon) icon = cfg.icon
+        } catch (_) {}
+      }
       folders.push({
         name: e.name,
         type: 'folder',
         path: path.relative(NOTES_DIR, path.join(dirPath, e.name)).replace(/\\/g, '/'),
-        children
+        children,
+        icon
       })
     } else if (e.isFile()) {
       files.push(e.name)

@@ -175,13 +175,13 @@
       row.style.paddingLeft = (12 + depth * 18 + 10) + 'px'
     }
 
-    // 展开指示器：一级目录用书籍图标，子级用三角箭头
+    // 展开指示器：一级目录用书籍图标（或自定义图标），子级用三角箭头
     if (isExpandable) {
       if (depth === 0 && isFolder) {
         const icon = document.createElement('img')
         icon.className = 'book-icon'
         if (expandedPaths.has(path)) icon.classList.add('expanded')
-        icon.src = getFolderIcon(path)
+        icon.src = node.icon || getFolderIcon(path)
         row.appendChild(icon)
       } else {
         const arrow = document.createElement('span')
