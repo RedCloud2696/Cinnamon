@@ -1,13 +1,42 @@
 {
   "semester": "大一下",
-  "intro": "待撰写…",
+  "intro": "真是非常感慨啊，没想到一个学期能有这么大的改变……",
   "courses": [
-    { "name": "健美（初级）", "gpa": "5.0/5.0", "score": "95", "credit": "1.0", "code": "PPAE0010G", "teacher": "史倩玉", "review": { "overview": "", "pros": "", "cons": "" } },
-    { "name": "普通化学（乙）", "gpa": "5.0/5.0", "score": "95", "credit": "2.0", "code": "CHEM1003G", "teacher": "张昭 / 王国平", "review": { "overview": "", "pros": "", "cons": "张昭老师口音很重，介意者慎选。" } },
-    { "name": "新中国史", "gpa": "4.8/5.0", "score": "94", "credit": "1.5", "code": "HIST2001G", "teacher": "肖如平", "review": { "overview": "", "pros": "", "cons": "" } },
-    { "name": "普通化学实验（乙）", "gpa": "4.8/5.0", "score": "92", "credit": "1.5", "code": "CHEM1006G", "teacher": "郭芸帆", "review": { "overview": "", "pros": "", "cons": "" } },
-    { "name": "常微分方程", "gpa": "4.2/5.0", "score": "88", "credit": "1.0", "code": "MATH1138F", "teacher": "徐翔", "review": { "overview": "", "pros": "", "cons": "" } },
-    { "name": "形势与政策Ⅰ", "gpa": "4.2/5.0", "score": "86", "credit": "1.0", "code": "ADMN1002G", "teacher": "潘贤林 / 邵瑾", "review": { "overview": "", "pros": "", "cons": "" } },
+    {
+      "name": "健美（初级）", "gpa": "5.0/5.0", "credit": "1.0", "code": "PPAE0010G", "teacher": "史倩玉",
+      "review": { "overview": "略，详见大一上", "pros": "", "cons": "" }
+    },
+    {
+      "name": "普通化学（乙）", "gpa": "5.0/5.0", "credit": "2.0", "code": "CHEM1003G", "teacher": "张昭 / 王国平",
+      "review": {
+        "overview": "这门课实际上都是张昭老师在上。补天难度较小，诸如焓变、熵变、速率计算、阿伦尼乌斯方程等只需要会使用即可。但还是建议上课听讲，理解了才能更加熟练地运用公式。",
+        "pros": "很负责，也很自知。前几次课多次强调受不了自己口音的同学请尽早换老师。上课时经常询问是否理解（虽然真的在听的人很少），也多次强调自己看过高中化学课本，对高-大化学知识衔接做的不错。比较体贴学生，有次时间不够，索性取消小测。",
+        "cons": "口音很重，介意者慎选。"
+      }
+    },
+    {
+      "name": "新中国史", "gpa": "4.8/5.0", "credit": "1.5", "code": "HIST2001G", "teacher": "肖如平",
+      "review": {
+        "overview": "签到一定要去。写论文时，参考文献要准备充分，我的参考文献涵盖期刊论文、报刊以及网络文献。",
+        "pros": "", "cons": ""
+      }
+    },
+    {
+      "name": "普通化学实验（乙）", "gpa": "4.8/5.0", "credit": "1.5", "code": "CHEM1006G", "teacher": "郭芸帆",
+      "review": {
+        "overview": "AI时代写报告应当是非常简单的时，但是还是要注意书写、形式与内容。除了阿司匹林制备，其他实验均较早完成。",
+        "pros": "郭芸帆是第一次带普化实验。她非常有亲和力，实验讲解的也比较细致，实验过程中也会亲切地帮助遇到困难的同学。助教hhz姐姐是郭芸帆老师的小师妹，也很随和，报告给分好。两位老师都不会刁难学生。",
+        "cons": ""
+      }
+    },
+    {
+      "name": "常微分方程", "gpa": "4.2/5.0", "credit": "1.0", "code": "MATH1138F", "teacher": "徐翔",
+      "review": { "overview": "", "pros": "", "cons": "" }
+    },
+    {
+      "name": "形势与政策Ⅰ", "gpa": "4.2/5.0", "credit": "1.0", "code": "ADMN1002G", "teacher": "潘贤林 / 邵瑾",
+      "review": { "overview": "", "pros": "", "cons": "" }
+    },
     { "name": "微积分（甲）Ⅱ", "gpa": null, "credit": "5.0", "code": "MATH1136G", "teacher": "童雯雯", "review": { "overview": "", "pros": "", "cons": "" } },
     { "name": "马克思主义基本原理", "gpa": null, "credit": "3.0", "code": "MARX2001G", "teacher": "王绍梁 / 郭军炜", "review": { "overview": "", "pros": "", "cons": "" } },
     { "name": "大学物理（甲）Ⅰ", "gpa": null, "credit": "4.0", "code": "PHY1001G", "teacher": "苟健", "review": { "overview": "", "pros": "", "cons": "" } },
