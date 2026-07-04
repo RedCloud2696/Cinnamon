@@ -168,7 +168,7 @@
             cards += `
               <div class="course-card">
                 <div class="course-name">${escapeHtml(c.name)}</div>
-                <span class="course-gpa" data-gpa="${escapeHtml(c.gpa)}">**.0/5.0</span>
+                <span class="course-gpa" data-gpa="${escapeHtml(c.gpa)}">**/5.0</span>
                 <div class="course-review">${reviewHtml}</div>
               </div>`
           }
@@ -203,7 +203,7 @@
             const isRevealed = this.classList.contains('revealed')
             if (isRevealed) {
               this.classList.remove('revealed')
-              this.textContent = '**.0/5.0'
+              this.textContent = '**/5.0'
             } else {
               this.classList.add('revealed')
               this.textContent = this.dataset.gpa
