@@ -49,7 +49,9 @@
       color: var(--heading);
       cursor: pointer;
       user-select: none;
-      padding: 8px 0;
+      padding: 10px 16px;
+      background: rgba(255, 251, 247, 0.7);
+      border-radius: 8px;
       border-bottom: 2px solid var(--accent);
       margin-bottom: 12px;
       display: flex;
@@ -128,7 +130,7 @@
       const searchEl  = document.getElementById('reviewSearch')
 
       // 学期文件列表（按倒序排列，最新学期在前面）
-      const SEMESTER_FILES = ['大一下.json', '大一上.json']
+      const SEMESTER_FILES = ['大一上.json', '大一下.json', '大二上.json', '大二下.json', '大三上.json', '大三下.json', '大四上.json', '大四下.json']
 
       let allData = []  // 所有学期数据
 
