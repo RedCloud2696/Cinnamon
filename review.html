@@ -7,6 +7,9 @@
   <link rel="icon" href="素材/索琳肉桂卷.png">
   <link rel="stylesheet" href="style.css">
   <style>
+    body {
+      background: #FFFBF7 url('images/索琳.png') no-repeat center/cover fixed;
+    }
     .review-page {
       max-width: 680px;
       margin: 0 auto;
@@ -21,16 +24,51 @@
     }
     .review-page .back-link:hover { color: var(--accent); }
 
-    .semester-title {
-      font-size: 1.5rem;
-      color: var(--heading);
+    .review-search-wrap {
       margin-bottom: 20px;
-      padding-bottom: 8px;
+    }
+    .review-search-wrap input {
+      width: 100%;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: .9rem;
+      font-family: var(--font);
+      background: rgba(255,255,255,.8);
+      color: var(--text);
+      outline: none;
+      transition: border-color .2s;
+    }
+    .review-search-wrap input:focus { border-color: var(--accent); }
+
+    .semester-section { margin-bottom: 24px; }
+
+    .semester-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--heading);
+      cursor: pointer;
+      user-select: none;
+      padding: 8px 0;
       border-bottom: 2px solid var(--accent);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .semester-arrow {
+      font-size: .8rem;
+      color: var(--accent);
+    }
+    .semester-count {
+      font-size: .75rem;
+      color: #B0A0A0;
+      font-weight: 400;
+      margin-left: auto;
     }
 
     .course-card {
-      background: rgba(255, 251, 247, 0.85);
+      background: rgba(255, 251, 247, 0.92);
       border-radius: 10px;
       padding: 18px 22px;
       margin-bottom: 14px;
@@ -74,6 +112,11 @@
 
   <div class="review-page">
     <a href="index.html" class="back-link">← 返回笔记</a>
+
+    <div class="review-search-wrap">
+      <input type="text" id="reviewSearch" placeholder="搜索课程…" autocomplete="off">
+    </div>
+
     <div id="reviewContent">
       <div class="review-empty">加载中…</div>
     </div>
@@ -82,25 +125,81 @@
   <script>
     ;(function () {
       const container = document.getElementById('reviewContent')
+      const searchEl  = document.getElementById('reviewSearch')
 
-      // 学期文件列表（手动添加新学期的 JSON 文件）
-      const SEMESTER_FILES = ['大一上.json']
+      // 学期文件列表（按倒序排列，最新学期在前面）
+      const SEMESTER_FILES = ['大一下.json', '大一上.json']
+
+      let allData = []  // 所有学期数据
 
       async function load () {
-        let html = ''
         for (const file of SEMESTER_FILES) {
           try {
             const res = await fetch('review/' + file)
             if (!res.ok) continue
             const data = await res.json()
-            html += renderSemester(data)
-          } catch (_) { /* 跳过加载失败的文件 */ }
+            allData.push(data)
+          } catch (_) {}
         }
-        container.innerHTML = html || '<div class="review-empty">暂无学期回顾</div>'
+        if (!allData.length) {
+          container.innerHTML = '<div class="review-empty">暂无学期回顾</div>'
+          return
+        }
+        render()
+        bindEvents()
+      }
 
-        // 绑定绩点点击事件
-        container.querySelectorAll('.course-gpa').forEach(el => {
+      function render (query) {
+        query = (query || '').trim().toLowerCase()
+        let html = ''
+        for (const data of allData) {
+          const filtered = query
+            ? data.courses.filter(c => c.name.toLowerCase().includes(query) ||
+                c.review.some(r => r.toLowerCase().includes(query)))
+            : data.courses
+          if (!filtered.length && query) continue
+
+          let cards = ''
+          for (const c of filtered) {
+            let reviewHtml = ''
+            for (const r of c.review) {
+              reviewHtml += '<p>' + escapeHtml(r) + '</p>'
+            }
+            cards += `
+              <div class="course-card">
+                <div class="course-name">${escapeHtml(c.name)}</div>
+                <span class="course-gpa" data-gpa="${escapeHtml(c.gpa)}">**.0/5.0</span>
+                <div class="course-review">${reviewHtml}</div>
+              </div>`
+          }
+          html += `
+            <div class="semester-section">
+              <div class="semester-title" data-semester="${escapeHtml(data.semester)}">
+                <span class="semester-arrow">▾</span> ${escapeHtml(data.semester)}
+                <span class="semester-count">${filtered.length} 门</span>
+              </div>
+              <div class="semester-body">${cards}</div>
+            </div>`
+        }
+        container.innerHTML = html || '<div class="review-empty">没有匹配的课程</div>'
+      }
+
+      function bindEvents () {
+        // 学期折叠
+        container.querySelectorAll('.semester-title').forEach(el => {
           el.addEventListener('click', function () {
+            const body = this.nextElementSibling
+            const arrow = this.querySelector('.semester-arrow')
+            const isOpen = body.style.display !== 'none'
+            body.style.display = isOpen ? 'none' : ''
+            arrow.textContent = isOpen ? '▸' : '▾'
+          })
+        })
+
+        // 绩点点击
+        container.querySelectorAll('.course-gpa').forEach(el => {
+          el.addEventListener('click', function (e) {
+            e.stopPropagation()
             const isRevealed = this.classList.contains('revealed')
             if (isRevealed) {
               this.classList.remove('revealed')
@@ -113,22 +212,15 @@
         })
       }
 
-      function renderSemester (data) {
-        let cards = ''
-        for (const c of data.courses) {
-          let reviewHtml = ''
-          for (const r of c.review) {
-            reviewHtml += '<p>' + escapeHtml(r) + '</p>'
-          }
-          cards += `
-            <div class="course-card">
-              <div class="course-name">${escapeHtml(c.name)}</div>
-              <span class="course-gpa" data-gpa="${escapeHtml(c.gpa)}">**.0/5.0</span>
-              <div class="course-review">${reviewHtml}</div>
-            </div>`
-        }
-        return `<div class="semester-title">${escapeHtml(data.semester)}</div>${cards}`
-      }
+      // 搜索
+      let searchTimer = null
+      searchEl.addEventListener('input', function () {
+        clearTimeout(searchTimer)
+        searchTimer = setTimeout(() => {
+          render(this.value)
+          bindEvents()
+        }, 200)
+      })
 
       function escapeHtml (str) {
         const div = document.createElement('div')
