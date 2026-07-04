@@ -43,6 +43,17 @@
 
     .semester-section { margin-bottom: 24px; }
 
+    .semester-body {
+      overflow: hidden;
+      max-height: 5000px;
+      transition: max-height .4s ease, opacity .3s ease;
+      opacity: 1;
+    }
+    .semester-body.collapsed {
+      max-height: 0;
+      opacity: 0;
+    }
+
     .semester-body-inner {
       background: rgba(255, 251, 247, 0.98);
       border-radius: 10px;
@@ -249,9 +260,14 @@
           el.addEventListener('click', function () {
             const body = this.nextElementSibling
             const arrow = this.querySelector('.semester-arrow')
-            const isOpen = body.style.display !== 'none'
-            body.style.display = isOpen ? 'none' : ''
-            arrow.textContent = isOpen ? '▸' : '▾'
+            const isOpen = !body.classList.contains('collapsed')
+            if (isOpen) {
+              body.classList.add('collapsed')
+              arrow.textContent = '▸'
+            } else {
+              body.classList.remove('collapsed')
+              arrow.textContent = '▾'
+            }
           })
         })
 
