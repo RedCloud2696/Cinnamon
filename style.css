@@ -211,6 +211,14 @@ button { font-family: inherit; cursor: pointer; }
   border-radius: 3px;
 }
 
+/* 分界线 */
+.nav-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 16px 8px;
+  flex-shrink: 0;
+}
+
 /* 侧边栏底部 GIF */
 .sidebar-gif {
   flex-shrink: 0;

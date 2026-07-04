@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学期回顾 · 红云irch的肉桂卷</title>
+  <link rel="icon" href="素材/索琳肉桂卷.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .review-page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+    .review-page .back-link {
+      display: inline-block;
+      margin-bottom: 24px;
+      font-size: .9rem;
+      color: #B0A0A0;
+      text-decoration: none;
+    }
+    .review-page .back-link:hover { color: var(--accent); }
+
+    .semester-title {
+      font-size: 1.5rem;
+      color: var(--heading);
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .course-card {
+      background: rgba(255, 251, 247, 0.85);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin-bottom: 14px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .course-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--heading);
+      margin-bottom: 6px;
+    }
+
+    .course-gpa {
+      display: inline-block;
+      font-size: .85rem;
+      color: #C0B0B0;
+      cursor: pointer;
+      user-select: none;
+      transition: color .2s;
+    }
+    .course-gpa:hover { color: var(--accent); }
+    .course-gpa.revealed { color: var(--accent); font-weight: 600; }
+
+    .course-review {
+      margin-top: 10px;
+      font-size: .9rem;
+      color: #8B7B7B;
+      line-height: 1.8;
+    }
+    .course-review p { margin-bottom: 6px; }
+
+    .review-empty {
+      text-align: center;
+      color: #C0B0B0;
+      padding: 60px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="review-page">
+    <a href="index.html" class="back-link">← 返回笔记</a>
+    <div id="reviewContent">
+      <div class="review-empty">加载中…</div>
+    </div>
+  </div>
+
+  <script>
+    ;(function () {
+      const container = document.getElementById('reviewContent')
+
+      // 学期文件列表（手动添加新学期的 JSON 文件）
+      const SEMESTER_FILES = ['大一上.json']
+
+      async function load () {
+        let html = ''
+        for (const file of SEMESTER_FILES) {
+          try {
+            const res = await fetch('review/' + file)
+            if (!res.ok) continue
+            const data = await res.json()
+            html += renderSemester(data)
+          } catch (_) { /* 跳过加载失败的文件 */ }
+        }
+        container.innerHTML = html || '<div class="review-empty">暂无学期回顾</div>'
+
+        // 绑定绩点点击事件
+        container.querySelectorAll('.course-gpa').forEach(el => {
+          el.addEventListener('click', function () {
+            const isRevealed = this.classList.contains('revealed')
+            if (isRevealed) {
+              this.classList.remove('revealed')
+              this.textContent = '**.0/5.0'
+            } else {
+              this.classList.add('revealed')
+              this.textContent = this.dataset.gpa
+            }
+          })
+        })
+      }
+
+      function renderSemester (data) {
+        let cards = ''
+        for (const c of data.courses) {
+          let reviewHtml = ''
+          for (const r of c.review) {
+            reviewHtml += '<p>' + escapeHtml(r) + '</p>'
+          }
+          cards += `
+            <div class="course-card">
+              <div class="course-name">${escapeHtml(c.name)}</div>
+              <span class="course-gpa" data-gpa="${escapeHtml(c.gpa)}">**.0/5.0</span>
+              <div class="course-review">${reviewHtml}</div>
+            </div>`
+        }
+        return `<div class="semester-title">${escapeHtml(data.semester)}</div>${cards}`
+      }
+
+      function escapeHtml (str) {
+        const div = document.createElement('div')
+        div.textContent = str
+        return div.innerHTML
+      }
+
+      load()
+    })()
+  </script>
+
+</body>
+</html>
