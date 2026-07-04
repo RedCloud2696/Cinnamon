@@ -129,12 +129,7 @@
     }
     .course-teacher::before { content: '· '; }
     .course-score { font-size: .8rem; color: #C0B0B0; }
-    .course-code {
-      display: block;
-      font-size: .7rem;
-      color: #D0C0C0;
-      margin-top: 2px;
-    }
+
     .review-tag {
       display: inline-block;
       min-width: 32px;
@@ -170,7 +165,7 @@
     <a href="index.html" class="back-link">← 返回笔记</a>
 
     <div class="review-search-wrap">
-      <input type="text" id="reviewSearch" placeholder="搜索课程…" autocomplete="off">
+      <input type="text" id="reviewSearch" placeholder="搜索课程 / 老师…" autocomplete="off">
     </div>
 
     <div id="reviewContent">
@@ -211,7 +206,7 @@
         for (const data of allData) {
           const filtered = query
             ? data.courses.filter(c => c.name.toLowerCase().includes(query) ||
-                c.review.some(r => r.toLowerCase().includes(query)))
+                (c.teacher && c.teacher.toLowerCase().includes(query)))
             : data.courses
           if (!filtered.length && query) continue
 
@@ -295,6 +290,13 @@
         searchTimer = setTimeout(() => {
           render(this.value)
           bindEvents()
+          // 搜索时自动展开有结果的学期
+          if (this.value.trim()) {
+            container.querySelectorAll('.semester-body.collapsed').forEach(b => {
+              const title = b.previousElementSibling
+              if (title) title.click()
+            })
+          }
         }, 200)
       })
 

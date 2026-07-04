@@ -2,14 +2,103 @@
   "semester": "大一上",
   "intro": "待撰写…",
   "courses": [
-    { "name": "健美（初级）", "gpa": "5.0/5.0", "credit": "1.0", "code": "PPAE0010G", "teacher": "史倩玉", "review": { "overview": "", "pros": "", "cons": "" } },
-    { "name": "C程序设计基础及实验", "gpa": "4.8/5.0", "credit": "4.0", "teacher": "纪守领", "review": { "overview": "", "pros": "", "cons": "" } },
-    { "name": "思想道德与法治", "gpa": "4.8/5.0", "credit": "3.0", "teacher": "詹美燕 / 卢思颖", "review": { "overview": "", "pros": "", "cons": "" } },
-    { "name": "线性代数（甲）", "gpa": "4.5/5.0", "credit": "3.5", "teacher": "于飞", "review": { "overview": "", "pros": "", "cons": "" } },
-    { "name": "工程图学", "gpa": "4.5/5.0", "credit": "2.5", "teacher": "何再兴 / 赵昕玥", "review": { "overview": "", "pros": "", "cons": "" } },
-    { "name": "中国近现代史纲要", "gpa": "4.2/5.0", "credit": "3.0", "teacher": "赵文心", "review": { "overview": "", "pros": "", "cons": "" } },
-    { "name": "微积分（甲）Ⅰ", "gpa": "3.9/5.0", "credit": "5.0", "teacher": "张泽银", "review": { "overview": "", "pros": "", "cons": "" } },
-    { "name": "大学英语Ⅲ", "gpa": "3.3/5.0", "credit": "3.0", "teacher": "焦华红", "review": { "overview": "", "pros": "", "cons": "" } },
-    { "name": "身体素质课", "gpa": null, "teacher": "张宇", "review": { "overview": "", "pros": "", "cons": "" } }
+    {
+      "name": "健美（初级）",
+      "gpa": "5.0/5.0",
+      "credit": "1.0",
+      "teacher": "史倩玉",
+      "review": {
+        "overview": "",
+        "pros": "",
+        "cons": ""
+      }
+    },
+    {
+      "name": "C程序设计基础及实验",
+      "gpa": "4.8/5.0",
+      "credit": "4.0",
+      "teacher": "纪守领",
+      "review": {
+        "overview": "",
+        "pros": "",
+        "cons": ""
+      }
+    },
+    {
+      "name": "思想道德与法治",
+      "gpa": "4.8/5.0",
+      "credit": "3.0",
+      "teacher": "詹美燕 / 卢思颖",
+      "review": {
+        "overview": "",
+        "pros": "",
+        "cons": ""
+      }
+    },
+    {
+      "name": "线性代数（甲）",
+      "gpa": "4.5/5.0",
+      "credit": "3.5",
+      "teacher": "于飞",
+      "review": {
+        "overview": "",
+        "pros": "",
+        "cons": ""
+      }
+    },
+    {
+      "name": "工程图学",
+      "gpa": "4.5/5.0",
+      "credit": "2.5",
+      "teacher": "何再兴 / 赵昕玥",
+      "review": {
+        "overview": "",
+        "pros": "",
+        "cons": ""
+      }
+    },
+    {
+      "name": "中国近现代史纲要",
+      "gpa": "4.2/5.0",
+      "credit": "3.0",
+      "teacher": "赵文心",
+      "review": {
+        "overview": "",
+        "pros": "",
+        "cons": ""
+      }
+    },
+    {
+      "name": "微积分（甲）Ⅰ",
+      "gpa": "3.9/5.0",
+      "credit": "5.0",
+      "teacher": "张泽银",
+      "review": {
+        "overview": "",
+        "pros": "",
+        "cons": ""
+      }
+    },
+    {
+      "name": "大学英语Ⅲ",
+      "gpa": "3.3/5.0",
+      "credit": "3.0",
+      "teacher": "焦华红",
+      "review": {
+        "overview": "",
+        "pros": "",
+        "cons": ""
+      }
+    },
+    {
+      "name": "身体素质课",
+      "gpa": null,
+      "teacher": "张宇",
+      "review": {
+        "overview": "",
+        "pros": "",
+        "cons": ""
+      }
+    }
   ]
 }
