@@ -245,10 +245,10 @@
           html += `
             <div class="semester-section">
               <div class="semester-title" data-semester="${escapeHtml(data.semester)}">
-                <span class="semester-arrow">▾</span> ${escapeHtml(data.semester)}
+                <span class="semester-arrow">▸</span> ${escapeHtml(data.semester)}
                 <span class="semester-count">${filtered.length} 门</span>
               </div>
-              <div class="semester-body"><div class="semester-body-inner">${introHtml}${cards}</div></div>
+              <div class="semester-body collapsed"><div class="semester-body-inner">${introHtml}${cards}</div></div>
             </div>`
         }
         container.innerHTML = html || '<div class="review-empty">没有匹配的课程</div>'
