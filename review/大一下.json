@@ -42,6 +42,7 @@
     { "name": "大学物理（甲）Ⅰ", "gpa": null, "credit": "4.0", "code": "PHY1001G", "teacher": "苟健", "review": { "overview": "", "pros": "", "cons": "" } },
     { "name": "职业生涯与发展规划", "gpa": null, "credit": "2.0", "code": "ADMN0302G1", "teacher": "王璐莎", "review": { "overview": "", "pros": "", "cons": "" } },
     { "name": "机械制图及CAD基础", "gpa": null, "credit": "1.5", "code": "ME1103F", "teacher": "伊国栋", "review": { "overview": "", "pros": "", "cons": "" } },
-    { "name": "人工智能基础（A）", "gpa": null, "credit": "2.0", "code": "CS1241G", "teacher": "林小杰", "review": { "overview": "", "pros": "", "cons": "" } }
+    { "name": "人工智能基础（A）", "gpa": null, "credit": "2.0", "code": "CS1241G", "teacher": "林小杰", "review": { "overview": "", "pros": "", "cons": "" } },
+    { "name": "身体素质课", "gpa": null, "credit": null, "teacher": "朱晓龙", "review": { "overview": "", "pros": "", "cons": "" } }
   ]
 }
