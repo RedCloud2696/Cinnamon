@@ -17,7 +17,6 @@
   const btnPptx     = document.getElementById('btnPptx')
   const prefaceNav  = document.getElementById('prefaceNav')
   const notifyNav   = document.getElementById('notifyNav')
-  const reviewNav   = document.getElementById('reviewNav')
   const updateLog   = document.getElementById('updateLog')
   const sidebarGif  = document.getElementById('sidebarGif')
   const backToTop   = document.getElementById('backToTop')
@@ -176,13 +175,13 @@
       row.style.paddingLeft = (12 + depth * 18 + 10) + 'px'
     }
 
-    // 展开指示器：一级目录用书籍图标（或自定义图标），子级用三角箭头
+    // 展开指示器：一级目录用书籍图标，子级用三角箭头
     if (isExpandable) {
       if (depth === 0 && isFolder) {
         const icon = document.createElement('img')
         icon.className = 'book-icon'
         if (expandedPaths.has(path)) icon.classList.add('expanded')
-        icon.src = node.icon || getFolderIcon(path)
+        icon.src = getFolderIcon(path)
         row.appendChild(icon)
       } else {
         const arrow = document.createElement('span')
@@ -211,17 +210,17 @@
         toggleFolder(path)
       }
       // 如果笔记有可预览/下载的内容，同时选中
-      if (node.pdf || node.one || node.md) {
+      if (node.pdf || node.one) {
         selectNote(node)
         if (window.innerWidth <= 768) closeSidebar()
       }
     })
 
     // 高亮激活行
-    if (activePath && !isExpandable && activePath === node.pdf) {
+    if (!isExpandable && activePath === node.pdf) {
       row.classList.add('active')
     }
-    if (activePath && hasKids && activePath === (node.one || node.pdf)) {
+    if (hasKids && activePath === (node.one || node.pdf)) {
       row.classList.add('active')
     }
 
@@ -356,7 +355,7 @@
 
   // --- 选中笔记 ---
   function selectNote (node) {
-    activePath = node.pdf || node.md || node.one || null
+    activePath = node.pdf || null
     noteTitle.textContent = node.name
 
     // 下载按钮 (.one)
@@ -377,54 +376,18 @@
       btnPptx.style.display = 'none'
     }
 
-    // Markdown 预览
-    if (node.md) {
-      pdfViewer.innerHTML = '<div class="md-loading">加载中…</div>'
-      fetch(node.md)
-        .then(r => r.text())
-        .then(text => {
-          const html = parseMarkdown(text)
-          pdfViewer.innerHTML = `<div class="md-preview">${html}</div>`
-        })
-        .catch(() => {
-          pdfViewer.innerHTML = '<div class="welcome-placeholder"><p>加载失败</p></div>'
-        })
-    } else if (node.pdf) {
+    // PDF 预览
+    if (node.pdf) {
       pdfViewer.innerHTML = `<iframe src="${node.pdf}#toolbar=1&navpanes=0"
         title="${node.name}" allowfullscreen></iframe>`
     } else {
       pdfViewer.innerHTML = `
         <div class="welcome-placeholder">
-          <p>该笔记没有可预览内容<br><small style="color:#D0C0C0;">仅可下载</small></p>
+          <p>该笔记没有 PDF 文件<br><small style="color:#D0C0C0;">仅有下载</small></p>
         </div>`
     }
 
     renderTree(searchEl.value)
-  }
-
-  // --- 简易 Markdown 解析 ---
-  function parseMarkdown (md) {
-    if (!md.trim()) return '<p style="color:#C0B0B0">暂无内容，等待作者填写…</p>'
-    let html = md
-      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    html = html.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>')
-    html = html.replace(/`([^`]+)`/g, '<code>$1</code>')
-    html = html.replace(/^#### (.+)$/gm, '<h4>$1</h4>')
-    html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>')
-    html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>')
-    html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>')
-    html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
-    html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    html = html.replace(/\*(.+?)\*/g, '<em>$1</em>')
-    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">')
-    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank">$1</a>')
-    html = html.replace(/^---$/gm, '<hr>')
-    html = html.replace(/^[\-\*] (.+)$/gm, '<li>$1</li>')
-    html = html.replace(/\n\n/g, '</p><p>')
-    html = '<p>' + html + '</p>'
-    html = html.replace(/<p><\/p>/g, '')
-    html = html.replace(/\n/g, '<br>')
-    return html
   }
 
   // --- 搜索 ---
@@ -530,22 +493,7 @@
   })()
 
   // --- 启动 ---
-  // 侧边栏「学期回顾」→ 跳转到树中的学期回顾
-  reviewNav.addEventListener('click', function () {
-    expandedPaths.add('学期回顾')
-    renderTree(searchEl.value)
-    setTimeout(() => {
-      const rows = treeEl.querySelectorAll('.tree-row')
-      for (const r of rows) {
-        if (r.querySelector('.label')?.textContent === '学期回顾') {
-          r.scrollIntoView({ behavior: 'smooth', block: 'start' })
-          break
-        }
-      }
-    }, 100)
-    if (window.innerWidth <= 768) closeSidebar()
-  })
-
+  // 侧边栏「序言」→ 切换文字面板
   // 侧边栏「通知」→ 切换更新日志（互斥：关闭序言）
   notifyNav.addEventListener('click', function () {
     if (activePath) resetToWelcome()

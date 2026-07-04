@@ -28,32 +28,21 @@ function scanDir (dirPath) {
     if (IGNORE.has(e.name) || e.name.startsWith('.')) continue
     if (e.isDirectory()) {
       const children = scanDir(path.join(dirPath, e.name))
-      // 检查子文件夹是否有自定义图标
-      let icon = undefined
-      const subIndex = path.join(dirPath, e.name, 'index.json')
-      if (fs.existsSync(subIndex)) {
-        try {
-          const cfg = JSON.parse(fs.readFileSync(subIndex, 'utf-8'))
-          if (cfg.icon) icon = cfg.icon
-        } catch (_) {}
-      }
       folders.push({
         name: e.name,
         type: 'folder',
         path: path.relative(NOTES_DIR, path.join(dirPath, e.name)).replace(/\\/g, '/'),
-        children,
-        icon
+        children
       })
     } else if (e.isFile()) {
       files.push(e.name)
     }
   }
 
-  // --- 配对 PDF / .one / .pptx / .md ---
+  // --- 配对 PDF / .one / .pptx ---
   const pdfMap  = new Map()   // basename -> filename
   const oneMap  = new Map()
   const pptxMap = new Map()
-  const mdMap   = new Map()
 
   for (const f of files) {
     const ext  = path.extname(f).toLowerCase()
@@ -61,14 +50,13 @@ function scanDir (dirPath) {
     if (ext === '.pdf')  pdfMap.set(base, f)
     if (ext === '.one')  oneMap.set(base, f)
     if (ext === '.pptx') pptxMap.set(base, f)
-    if (ext === '.md')   mdMap.set(base, f)
   }
 
   const relDir = path.relative(NOTES_DIR, dirPath).replace(/\\/g, '/')
   const prefix = relDir ? 'notes/' + relDir + '/' : 'notes/'
 
   // 首先生成所有笔记节点
-  const allBases = new Set([...pdfMap.keys(), ...oneMap.keys(), ...pptxMap.keys(), ...mdMap.keys()])
+  const allBases = new Set([...pdfMap.keys(), ...oneMap.keys()])
   const notes = []
 
   for (const base of allBases) {
@@ -78,8 +66,7 @@ function scanDir (dirPath) {
       path: relDir,
       pdf:  pdfMap.has(base)  ? prefix + pdfMap.get(base)  : null,
       one:  oneMap.has(base)  ? prefix + oneMap.get(base)  : null,
-      pptx: pptxMap.has(base) ? prefix + pptxMap.get(base) : null,
-      md:   mdMap.has(base)   ? prefix + mdMap.get(base)   : null
+      pptx: pptxMap.has(base) ? prefix + pptxMap.get(base) : null
     })
   }
 
@@ -111,8 +98,7 @@ function scanDir (dirPath) {
       path: s.path,
       pdf:  s.pdf,
       one:  null,
-      pptx: s.pptx || null,
-      md:   s.md || null
+      pptx: s.pptx || null
     }))
     // 从平级列表中移除孤儿 PDF（它们现在是子节点）
     for (const s of stray) {
@@ -132,7 +118,7 @@ function scanDir (dirPath) {
         if (score > bestScore) { bestScore = score; best = o }
       }
       if (best && bestScore > 0) {
-        best.children.push({ name: s.name, type: 'note', path: s.path, pdf: s.pdf, one: null, pptx: s.pptx || null, md: s.md || null })
+        best.children.push({ name: s.name, type: 'note', path: s.path, pdf: s.pdf, one: null, pptx: s.pptx || null })
       }
     }
     // 移除已被挂载的孤儿

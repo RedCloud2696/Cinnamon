@@ -1,32 +1,6 @@
 {
-  "updated": "2026-07-03T11:37:10.823Z",
+  "updated": "2026-07-04T01:04:40.747Z",
   "tree": [
-    {
-      "name": "学期回顾",
-      "type": "folder",
-      "path": "学期回顾",
-      "children": [
-        {
-          "name": "大一上",
-          "type": "note",
-          "path": "学期回顾",
-          "pdf": null,
-          "one": null,
-          "pptx": null,
-          "md": "notes/学期回顾/大一上.md"
-        },
-        {
-          "name": "大一下",
-          "type": "note",
-          "path": "学期回顾",
-          "pdf": null,
-          "one": null,
-          "pptx": null,
-          "md": "notes/学期回顾/大一下.md"
-        }
-      ],
-      "icon": "素材/属性统计器.webp"
-    },
     {
       "name": "大学物理（甲）Ⅰ",
       "type": "folder",
@@ -38,8 +12,7 @@
           "path": "大学物理（甲）Ⅰ",
           "pdf": "notes/大学物理（甲）Ⅰ/公式整理（面向期末，未完全覆盖大物Ⅰ）.pdf",
           "one": "notes/大学物理（甲）Ⅰ/公式整理（面向期末，未完全覆盖大物Ⅰ）.one",
-          "pptx": null,
-          "md": null
+          "pptx": null
         }
       ]
     },
@@ -60,7 +33,6 @@
               "pdf": null,
               "one": "notes/机械制图及CAD基础/日常课程/机械制图及CAD基础.one",
               "pptx": null,
-              "md": null,
               "children": [
                 {
                   "name": "表面结构要求",
@@ -68,8 +40,7 @@
                   "path": "机械制图及CAD基础/日常课程",
                   "pdf": "notes/机械制图及CAD基础/日常课程/表面结构要求.pdf",
                   "one": null,
-                  "pptx": null,
-                  "md": null
+                  "pptx": null
                 },
                 {
                   "name": "极限与配合、几何公差",
@@ -77,8 +48,7 @@
                   "path": "机械制图及CAD基础/日常课程",
                   "pdf": "notes/机械制图及CAD基础/日常课程/极限与配合、几何公差.pdf",
                   "one": null,
-                  "pptx": null,
-                  "md": null
+                  "pptx": null
                 },
                 {
                   "name": "装配图的作用、内容与表达",
@@ -86,8 +56,7 @@
                   "path": "机械制图及CAD基础/日常课程",
                   "pdf": "notes/机械制图及CAD基础/日常课程/装配图的作用、内容与表达.pdf",
                   "one": null,
-                  "pptx": null,
-                  "md": null
+                  "pptx": null
                 },
                 {
                   "name": "装配结构的合理设计",
@@ -95,8 +64,7 @@
                   "path": "机械制图及CAD基础/日常课程",
                   "pdf": "notes/机械制图及CAD基础/日常课程/装配结构的合理设计.pdf",
                   "one": null,
-                  "pptx": null,
-                  "md": null
+                  "pptx": null
                 },
                 {
                   "name": "读装配图拆画零件图",
@@ -104,8 +72,7 @@
                   "path": "机械制图及CAD基础/日常课程",
                   "pdf": "notes/机械制图及CAD基础/日常课程/读装配图拆画零件图.pdf",
                   "one": null,
-                  "pptx": null,
-                  "md": null
+                  "pptx": null
                 }
               ]
             }
@@ -122,8 +89,7 @@
               "path": "机械制图及CAD基础/课堂PPT",
               "pdf": "notes/机械制图及CAD基础/课堂PPT/表面结构要求.pdf",
               "one": null,
-              "pptx": "notes/机械制图及CAD基础/课堂PPT/表面结构要求.pptx",
-              "md": null
+              "pptx": "notes/机械制图及CAD基础/课堂PPT/表面结构要求.pptx"
             },
             {
               "name": "极限与配合、几何公差、读箱体零件图",
@@ -131,8 +97,7 @@
               "path": "机械制图及CAD基础/课堂PPT",
               "pdf": "notes/机械制图及CAD基础/课堂PPT/极限与配合、几何公差、读箱体零件图.pdf",
               "one": null,
-              "pptx": "notes/机械制图及CAD基础/课堂PPT/极限与配合、几何公差、读箱体零件图.pptx",
-              "md": null
+              "pptx": "notes/机械制图及CAD基础/课堂PPT/极限与配合、几何公差、读箱体零件图.pptx"
             },
             {
               "name": "装配图的作用、内容与表达",
@@ -140,8 +105,7 @@
               "path": "机械制图及CAD基础/课堂PPT",
               "pdf": "notes/机械制图及CAD基础/课堂PPT/装配图的作用、内容与表达.pdf",
               "one": null,
-              "pptx": "notes/机械制图及CAD基础/课堂PPT/装配图的作用、内容与表达.pptx",
-              "md": null
+              "pptx": "notes/机械制图及CAD基础/课堂PPT/装配图的作用、内容与表达.pptx"
             },
             {
               "name": "装配结构的合理设计",
@@ -149,8 +113,7 @@
               "path": "机械制图及CAD基础/课堂PPT",
               "pdf": "notes/机械制图及CAD基础/课堂PPT/装配结构的合理设计.pdf",
               "one": null,
-              "pptx": "notes/机械制图及CAD基础/课堂PPT/装配结构的合理设计.pptx",
-              "md": null
+              "pptx": "notes/机械制图及CAD基础/课堂PPT/装配结构的合理设计.pptx"
             },
             {
               "name": "轴系装配结构设计",
@@ -158,8 +121,7 @@
               "path": "机械制图及CAD基础/课堂PPT",
               "pdf": "notes/机械制图及CAD基础/课堂PPT/轴系装配结构设计.pdf",
               "one": null,
-              "pptx": "notes/机械制图及CAD基础/课堂PPT/轴系装配结构设计.pptx",
-              "md": null
+              "pptx": "notes/机械制图及CAD基础/课堂PPT/轴系装配结构设计.pptx"
             },
             {
               "name": "读装配图拆画零件图",
@@ -167,8 +129,7 @@
               "path": "机械制图及CAD基础/课堂PPT",
               "pdf": "notes/机械制图及CAD基础/课堂PPT/读装配图拆画零件图.pdf",
               "one": null,
-              "pptx": "notes/机械制图及CAD基础/课堂PPT/读装配图拆画零件图.pptx",
-              "md": null
+              "pptx": "notes/机械制图及CAD基础/课堂PPT/读装配图拆画零件图.pptx"
             },
             {
               "name": "读微调机构装配图",
@@ -176,8 +137,7 @@
               "path": "机械制图及CAD基础/课堂PPT",
               "pdf": "notes/机械制图及CAD基础/课堂PPT/读微调机构装配图.pdf",
               "one": null,
-              "pptx": "notes/机械制图及CAD基础/课堂PPT/读微调机构装配图.pptx",
-              "md": null
+              "pptx": "notes/机械制图及CAD基础/课堂PPT/读微调机构装配图.pptx"
             },
             {
               "name": "总复习第一讲",
@@ -185,8 +145,7 @@
               "path": "机械制图及CAD基础/课堂PPT",
               "pdf": "notes/机械制图及CAD基础/课堂PPT/总复习第一讲.pdf",
               "one": null,
-              "pptx": "notes/机械制图及CAD基础/课堂PPT/总复习第一讲.pptx",
-              "md": null
+              "pptx": "notes/机械制图及CAD基础/课堂PPT/总复习第一讲.pptx"
             },
             {
               "name": "总复习第二讲",
@@ -194,8 +153,7 @@
               "path": "机械制图及CAD基础/课堂PPT",
               "pdf": "notes/机械制图及CAD基础/课堂PPT/总复习第二讲.pdf",
               "one": null,
-              "pptx": "notes/机械制图及CAD基础/课堂PPT/总复习第二讲.pptx",
-              "md": null
+              "pptx": "notes/机械制图及CAD基础/课堂PPT/总复习第二讲.pptx"
             }
           ]
         },
@@ -215,8 +173,7 @@
                   "path": "机械制图及CAD基础/期末考试/样卷",
                   "pdf": "notes/机械制图及CAD基础/期末考试/样卷/17-18 夏 机械制图及CAD（答案1）.pdf",
                   "one": null,
-                  "pptx": null,
-                  "md": null
+                  "pptx": null
                 },
                 {
                   "name": "17-18 夏 机械制图及CAD（答案2）",
@@ -224,8 +181,7 @@
                   "path": "机械制图及CAD基础/期末考试/样卷",
                   "pdf": "notes/机械制图及CAD基础/期末考试/样卷/17-18 夏 机械制图及CAD（答案2）.pdf",
                   "one": null,
-                  "pptx": null,
-                  "md": null
+                  "pptx": null
                 },
                 {
                   "name": "17-18 夏 机械制图及CAD（样卷）",
@@ -233,8 +189,7 @@
                   "path": "机械制图及CAD基础/期末考试/样卷",
                   "pdf": "notes/机械制图及CAD基础/期末考试/样卷/17-18 夏 机械制图及CAD（样卷）.pdf",
                   "one": null,
-                  "pptx": null,
-                  "md": null
+                  "pptx": null
                 }
               ]
             },
@@ -244,8 +199,7 @@
               "path": "机械制图及CAD基础/期末考试",
               "pdf": "notes/机械制图及CAD基础/期末考试/期末题型与个人期末回忆.pdf",
               "one": "notes/机械制图及CAD基础/期末考试/期末题型与个人期末回忆.one",
-              "pptx": null,
-              "md": null
+              "pptx": null
             },
             {
               "name": "尺寸标注",
@@ -253,8 +207,7 @@
               "path": "机械制图及CAD基础/期末考试",
               "pdf": "notes/机械制图及CAD基础/期末考试/尺寸标注.pdf",
               "one": "notes/机械制图及CAD基础/期末考试/尺寸标注.one",
-              "pptx": null,
-              "md": null
+              "pptx": null
             },
             {
               "name": "装配改错",
@@ -262,8 +215,7 @@
               "path": "机械制图及CAD基础/期末考试",
               "pdf": "notes/机械制图及CAD基础/期末考试/装配改错.pdf",
               "one": "notes/机械制图及CAD基础/期末考试/装配改错.one",
-              "pptx": null,
-              "md": null
+              "pptx": null
             },
             {
               "name": "读零件图，补画视图",
@@ -271,8 +223,7 @@
               "path": "机械制图及CAD基础/期末考试",
               "pdf": "notes/机械制图及CAD基础/期末考试/读零件图，补画视图.pdf",
               "one": "notes/机械制图及CAD基础/期末考试/读零件图，补画视图.one",
-              "pptx": null,
-              "md": null
+              "pptx": null
             },
             {
               "name": "读装配图拆画零件图",
@@ -280,8 +231,7 @@
               "path": "机械制图及CAD基础/期末考试",
               "pdf": "notes/机械制图及CAD基础/期末考试/读装配图拆画零件图.pdf",
               "one": "notes/机械制图及CAD基础/期末考试/读装配图拆画零件图.one",
-              "pptx": null,
-              "md": null
+              "pptx": null
             }
           ]
         }
@@ -298,8 +248,7 @@
           "path": "普通化学实验（乙）",
           "pdf": null,
           "one": "notes/普通化学实验（乙）/普通化学实验（乙）-汇总.one",
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "定量分析注意事项",
@@ -307,8 +256,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/定量分析注意事项.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "解热镇痛药阿司匹林的制备和提纯",
@@ -316,8 +264,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/解热镇痛药阿司匹林的制备和提纯.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "量气法测定摩尔气体常数",
@@ -325,8 +272,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/量气法测定摩尔气体常数.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "三草酸合铁(III)酸钾的制备及蓝晒法实验",
@@ -334,8 +280,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/三草酸合铁(III)酸钾的制备及蓝晒法实验.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "乙酸解离度及解离常数的测定（pH法）",
@@ -343,8 +288,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/乙酸解离度及解离常数的测定（pH法）.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "酸碱溶液配制及酸碱互滴",
@@ -352,8 +296,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/酸碱溶液配制及酸碱互滴.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "全透明工艺皂的制备",
@@ -361,8 +304,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/全透明工艺皂的制备.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "电镀铜",
@@ -370,8 +312,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/电镀铜.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "镇痛药百服宁、散利痛的薄层色谱分析",
@@ -379,8 +320,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/镇痛药百服宁、散利痛的薄层色谱分析.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "阿司匹林的纯度分析（熔点及含量测定）",
@@ -388,8 +328,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/阿司匹林的纯度分析（熔点及含量测定）.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "化学反应速率和活化能的测定（碘时钟）",
@@ -397,8 +336,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/化学反应速率和活化能的测定（碘时钟）.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "电位分析法测定茶叶中氟含量",
@@ -406,8 +344,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/电位分析法测定茶叶中氟含量.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "分光光度法测定乙酰水杨酸中的残留水杨酸",
@@ -415,8 +352,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/分光光度法测定乙酰水杨酸中的残留水杨酸.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "果蔬中维生素C含量的测定",
@@ -424,8 +360,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/果蔬中维生素C含量的测定.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         },
         {
           "name": "其他",
@@ -433,8 +368,7 @@
           "path": "普通化学实验（乙）",
           "pdf": "notes/普通化学实验（乙）/其他.pdf",
           "one": null,
-          "pptx": null,
-          "md": null
+          "pptx": null
         }
       ]
     }
