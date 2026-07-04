@@ -43,6 +43,21 @@
 
     .semester-section { margin-bottom: 24px; }
 
+    .semester-body-inner {
+      background: rgba(255, 251, 247, 0.98);
+      border-radius: 10px;
+      padding: 20px 22px;
+    }
+
+    .semester-intro {
+      font-size: .9rem;
+      color: #8B7B7B;
+      line-height: 1.8;
+      padding-bottom: 14px;
+      margin-bottom: 14px;
+      border-bottom: 1px dashed var(--border);
+    }
+
     .semester-title {
       font-size: 1.2rem;
       font-weight: 700;
@@ -70,12 +85,11 @@
     }
 
     .course-card {
-      background: rgba(255, 251, 247, 0.98);
-      border-radius: 10px;
-      padding: 18px 22px;
-      margin-bottom: 14px;
-      border-left: 3px solid var(--accent);
+      padding: 12px 0;
+      margin-bottom: 4px;
+      border-bottom: 1px solid var(--border);
     }
+    .course-card:last-child { border-bottom: none; }
 
     .course-name {
       font-size: 1.1rem;
@@ -94,6 +108,34 @@
     }
     .course-gpa:hover { color: var(--accent); }
     .course-gpa.revealed { color: var(--accent); font-weight: 600; }
+    .course-gpa.no-gpa { cursor: default; color: #D0C0C0; }
+    .course-credit { font-size: .8rem; color: #C0B0B0; }
+    .course-teacher {
+      font-size: .75rem;
+      color: #B0A0A0;
+      margin-left: 6px;
+    }
+    .course-teacher::before { content: '· '; }
+    .course-score { font-size: .8rem; color: #C0B0B0; }
+    .course-code {
+      display: block;
+      font-size: .7rem;
+      color: #D0C0C0;
+      margin-top: 2px;
+    }
+    .review-tag {
+      display: inline-block;
+      min-width: 32px;
+      padding: 1px 8px;
+      border-radius: 4px;
+      font-size: .75rem;
+      font-weight: 700;
+      margin-right: 6px;
+      text-align: center;
+    }
+    .review-tag.pros { background: #F0FFF0; color: #6B8B6B; border: 1px solid #D0E8D0; }
+    .review-tag.cons { background: #FFF0F0; color: #C08080; border: 1px solid #F0D0D0; }
+    .review-pros, .review-cons { margin-top: 4px; font-size: .85rem; }
 
     .course-review {
       margin-top: 10px;
@@ -161,26 +203,41 @@
             : data.courses
           if (!filtered.length && query) continue
 
+          // 按绩点降序，null 排最后
+          const sorted = [...filtered].sort((a, b) => {
+            const ga = a.gpa ? parseFloat(a.gpa) : -1
+            const gb = b.gpa ? parseFloat(b.gpa) : -1
+            return gb - ga
+          })
+
           let cards = ''
-          for (const c of filtered) {
+          for (const c of sorted) {
+            const rev = c.review || {}
+            // 兼容旧格式（数组）和新格式（对象）
             let reviewHtml = ''
-            for (const r of c.review) {
-              reviewHtml += '<p>' + escapeHtml(r) + '</p>'
+            if (Array.isArray(rev)) {
+              for (const r of rev) reviewHtml += '<p>' + escapeHtml(r) + '</p>'
+            } else {
+              if (rev.overview) reviewHtml += '<p>' + escapeHtml(rev.overview) + '</p>'
+              if (rev.pros) reviewHtml += '<p class="review-pros"><span class="review-tag pros">优点</span>' + escapeHtml(rev.pros) + '</p>'
+              if (rev.cons) reviewHtml += '<p class="review-cons"><span class="review-tag cons">缺点</span>' + escapeHtml(rev.cons) + '</p>'
             }
+            const teacherHtml = c.teacher ? `<span class="course-teacher">${escapeHtml(c.teacher)}</span>` : ''
             cards += `
               <div class="course-card">
-                <div class="course-name">${escapeHtml(c.name)}</div>
-                <span class="course-gpa" data-gpa="${escapeHtml(c.gpa)}">**/5.0</span>
+                <div class="course-name">${escapeHtml(c.name)}${teacherHtml}</div>
+                <span class="course-gpa${c.gpa ? '' : ' no-gpa'}" data-gpa="${escapeHtml(c.gpa || '')}">${c.gpa ? '**/5.0' : '--/5.0'}</span>${c.credit ? `<span class="course-credit"> · ${escapeHtml(c.credit)} 学分</span>` : ''}${c.code ? `<span class="course-code">${escapeHtml(c.code)}</span>` : ''}
                 <div class="course-review">${reviewHtml}</div>
               </div>`
           }
+          const introHtml = data.intro ? `<div class="semester-intro">${escapeHtml(data.intro)}</div>` : ''
           html += `
             <div class="semester-section">
               <div class="semester-title" data-semester="${escapeHtml(data.semester)}">
                 <span class="semester-arrow">▾</span> ${escapeHtml(data.semester)}
                 <span class="semester-count">${filtered.length} 门</span>
               </div>
-              <div class="semester-body">${cards}</div>
+              <div class="semester-body"><div class="semester-body-inner">${introHtml}${cards}</div></div>
             </div>`
         }
         container.innerHTML = html || '<div class="review-empty">没有匹配的课程</div>'
@@ -202,6 +259,7 @@
         container.querySelectorAll('.course-gpa').forEach(el => {
           el.addEventListener('click', function (e) {
             e.stopPropagation()
+            if (this.classList.contains('no-gpa')) return  // 没出分不响应点击
             const isRevealed = this.classList.contains('revealed')
             if (isRevealed) {
               this.classList.remove('revealed')

@@ -1,12 +1,18 @@
 {
   "semester": "大一下",
+  "intro": "待撰写…",
   "courses": [
-    {
-      "name": "项目待建设（示例）",
-      "gpa": "4.0/5.0",
-      "review": [
-        "项目待建设……"
-      ]
-    }
+    { "name": "健美（初级）", "gpa": "5.0/5.0", "score": "95", "credit": "1.0", "code": "PPAE0010G", "teacher": "史倩玉", "review": { "overview": "", "pros": "", "cons": "" } },
+    { "name": "普通化学（乙）", "gpa": "5.0/5.0", "score": "95", "credit": "2.0", "code": "CHEM1003G", "teacher": "张昭 / 王国平", "review": { "overview": "", "pros": "", "cons": "张昭老师口音很重，介意者慎选。" } },
+    { "name": "新中国史", "gpa": "4.8/5.0", "score": "94", "credit": "1.5", "code": "HIST2001G", "teacher": "肖如平", "review": { "overview": "", "pros": "", "cons": "" } },
+    { "name": "普通化学实验（乙）", "gpa": "4.8/5.0", "score": "92", "credit": "1.5", "code": "CHEM1006G", "teacher": "郭芸帆", "review": { "overview": "", "pros": "", "cons": "" } },
+    { "name": "常微分方程", "gpa": "4.2/5.0", "score": "88", "credit": "1.0", "code": "MATH1138F", "teacher": "徐翔", "review": { "overview": "", "pros": "", "cons": "" } },
+    { "name": "形势与政策Ⅰ", "gpa": "4.2/5.0", "score": "86", "credit": "1.0", "code": "ADMN1002G", "teacher": "潘贤林 / 邵瑾", "review": { "overview": "", "pros": "", "cons": "" } },
+    { "name": "微积分（甲）Ⅱ", "gpa": null, "credit": "5.0", "code": "MATH1136G", "teacher": "童雯雯", "review": { "overview": "", "pros": "", "cons": "" } },
+    { "name": "马克思主义基本原理", "gpa": null, "credit": "3.0", "code": "MARX2001G", "teacher": "王绍梁 / 郭军炜", "review": { "overview": "", "pros": "", "cons": "" } },
+    { "name": "大学物理（甲）Ⅰ", "gpa": null, "credit": "4.0", "code": "PHY1001G", "teacher": "苟健", "review": { "overview": "", "pros": "", "cons": "" } },
+    { "name": "职业生涯与发展规划", "gpa": null, "credit": "2.0", "code": "ADMN0302G1", "teacher": "王璐莎", "review": { "overview": "", "pros": "", "cons": "" } },
+    { "name": "机械制图及CAD基础", "gpa": null, "credit": "1.5", "code": "ME1103F", "teacher": "伊国栋", "review": { "overview": "", "pros": "", "cons": "" } },
+    { "name": "人工智能基础（A）", "gpa": null, "credit": "2.0", "code": "CS1241G", "teacher": "林小杰", "review": { "overview": "", "pros": "", "cons": "" } }
   ]
 }
