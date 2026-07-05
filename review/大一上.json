@@ -108,6 +108,30 @@
         "cons": ""
       },
       "grading": ""
+    },
+    {
+      "name": "军训",
+      "gpa": "4.2/5.0",
+      "credit": "1.0",
+      "grading": "",
+      "teacher": "",
+      "review": {
+        "overview": "",
+        "pros": "",
+        "cons": ""
+      }
+    },
+    {
+      "name": "形势与政策Ⅰ",
+      "gpa": null,
+      "credit": "1.0",
+      "grading": "",
+      "teacher": "",
+      "review": {
+        "overview": "详见大一下",
+        "pros": "",
+        "cons": ""
+      }
     }
   ]
 }

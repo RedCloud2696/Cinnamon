@@ -242,7 +242,7 @@
             cards += `
               <div class="course-card">
                 <div class="course-name">${escapeHtml(c.name)}${teacherHtml}</div>
-                <span class="course-gpa${c.gpa ? '' : ' no-gpa'}" data-gpa="${escapeHtml(c.gpa || '')}">${c.gpa ? '**/5.0' : '--/5.0'}</span>${c.credit ? `<span class="course-credit"> · ${escapeHtml(c.credit)} 学分</span>` : ''}
+                ${c.credit ? `<span class="course-credit">${escapeHtml(c.credit)} 学分</span>` : ''}
                 ${c.grading ? `<div class="course-grading">${escapeHtml(c.grading)}</div>` : ''}
                 <div class="course-review">${reviewHtml}</div>
               </div>`
