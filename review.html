@@ -122,6 +122,15 @@
     .course-gpa.revealed { color: var(--accent); font-weight: 600; }
     .course-gpa.no-gpa { cursor: default; color: #D0C0C0; }
     .course-credit { font-size: .8rem; color: #C0B0B0; }
+    .course-grading {
+      font-size: .8rem;
+      color: #A0A0A0;
+      margin-top: 4px;
+      padding: 4px 10px;
+      background: rgba(255,251,247,.5);
+      border-radius: 6px;
+      display: inline-block;
+    }
     .course-teacher {
       font-size: .75rem;
       color: #B0A0A0;
@@ -233,7 +242,9 @@
             cards += `
               <div class="course-card">
                 <div class="course-name">${escapeHtml(c.name)}${teacherHtml}</div>
-                <span class="course-gpa${c.gpa ? '' : ' no-gpa'}" data-gpa="${escapeHtml(c.gpa || '')}">${c.gpa ? '**/5.0' : '--/5.0'}</span>${c.credit ? `<span class="course-credit"> · ${escapeHtml(c.credit)} 学分</span>` : ''}                <div class="course-review">${reviewHtml}</div>
+                <span class="course-gpa${c.gpa ? '' : ' no-gpa'}" data-gpa="${escapeHtml(c.gpa || '')}">${c.gpa ? '**/5.0' : '--/5.0'}</span>${c.credit ? `<span class="course-credit"> · ${escapeHtml(c.credit)} 学分</span>` : ''}
+                ${c.grading ? `<div class="course-grading">${escapeHtml(c.grading)}</div>` : ''}
+                <div class="course-review">${reviewHtml}</div>
               </div>`
           }
           const introHtml = data.intro ? `<div class="semester-intro">${escapeHtml(data.intro)}</div>` : ''

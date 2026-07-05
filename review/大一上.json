@@ -11,7 +11,8 @@
         "overview": "",
         "pros": "",
         "cons": ""
-      }
+      },
+      "grading": ""
     },
     {
       "name": "C程序设计基础及实验",
@@ -22,7 +23,8 @@
         "overview": "",
         "pros": "",
         "cons": ""
-      }
+      },
+      "grading": ""
     },
     {
       "name": "思想道德与法治",
@@ -33,7 +35,8 @@
         "overview": "",
         "pros": "",
         "cons": ""
-      }
+      },
+      "grading": ""
     },
     {
       "name": "线性代数（甲）",
@@ -44,7 +47,8 @@
         "overview": "",
         "pros": "",
         "cons": ""
-      }
+      },
+      "grading": ""
     },
     {
       "name": "工程图学",
@@ -55,7 +59,8 @@
         "overview": "",
         "pros": "",
         "cons": ""
-      }
+      },
+      "grading": ""
     },
     {
       "name": "中国近现代史纲要",
@@ -66,7 +71,8 @@
         "overview": "",
         "pros": "",
         "cons": ""
-      }
+      },
+      "grading": ""
     },
     {
       "name": "微积分（甲）Ⅰ",
@@ -77,7 +83,8 @@
         "overview": "",
         "pros": "",
         "cons": ""
-      }
+      },
+      "grading": ""
     },
     {
       "name": "大学英语Ⅲ",
@@ -88,7 +95,8 @@
         "overview": "",
         "pros": "",
         "cons": ""
-      }
+      },
+      "grading": ""
     },
     {
       "name": "身体素质课",
@@ -98,7 +106,8 @@
         "overview": "",
         "pros": "",
         "cons": ""
-      }
+      },
+      "grading": ""
     }
   ]
 }
