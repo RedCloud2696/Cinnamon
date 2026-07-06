@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T02:39:17.321Z",
+  "updated": "2026-07-06T12:09:36.883Z",
   "tree": [
     {
       "name": "大学物理（甲）Ⅰ",
@@ -163,6 +163,81 @@
           "path": "机械制图及CAD基础/期末考试",
           "children": [
             {
+              "name": "期末题型与个人期末回忆",
+              "type": "folder",
+              "path": "机械制图及CAD基础/期末考试/期末题型与个人期末回忆",
+              "children": [
+                {
+                  "name": "期末题型与个人期末回忆",
+                  "type": "note",
+                  "path": "机械制图及CAD基础/期末考试/期末题型与个人期末回忆",
+                  "pdf": "notes/机械制图及CAD基础/期末考试/期末题型与个人期末回忆/期末题型与个人期末回忆.pdf",
+                  "one": "notes/机械制图及CAD基础/期末考试/期末题型与个人期末回忆/期末题型与个人期末回忆.one",
+                  "pptx": null
+                }
+              ]
+            },
+            {
+              "name": "尺寸标注",
+              "type": "folder",
+              "path": "机械制图及CAD基础/期末考试/尺寸标注",
+              "children": [
+                {
+                  "name": "尺寸标注",
+                  "type": "note",
+                  "path": "机械制图及CAD基础/期末考试/尺寸标注",
+                  "pdf": "notes/机械制图及CAD基础/期末考试/尺寸标注/尺寸标注.pdf",
+                  "one": "notes/机械制图及CAD基础/期末考试/尺寸标注/尺寸标注.one",
+                  "pptx": null
+                }
+              ]
+            },
+            {
+              "name": "装配改错",
+              "type": "folder",
+              "path": "机械制图及CAD基础/期末考试/装配改错",
+              "children": [
+                {
+                  "name": "装配改错",
+                  "type": "note",
+                  "path": "机械制图及CAD基础/期末考试/装配改错",
+                  "pdf": "notes/机械制图及CAD基础/期末考试/装配改错/装配改错.pdf",
+                  "one": "notes/机械制图及CAD基础/期末考试/装配改错/装配改错.one",
+                  "pptx": null
+                }
+              ]
+            },
+            {
+              "name": "读零件图，补画视图",
+              "type": "folder",
+              "path": "机械制图及CAD基础/期末考试/读零件图，补画视图",
+              "children": [
+                {
+                  "name": "读零件图，补画视图",
+                  "type": "note",
+                  "path": "机械制图及CAD基础/期末考试/读零件图，补画视图",
+                  "pdf": "notes/机械制图及CAD基础/期末考试/读零件图，补画视图/读零件图，补画视图.pdf",
+                  "one": "notes/机械制图及CAD基础/期末考试/读零件图，补画视图/读零件图，补画视图.one",
+                  "pptx": null
+                }
+              ]
+            },
+            {
+              "name": "读装配图拆画零件图",
+              "type": "folder",
+              "path": "机械制图及CAD基础/期末考试/读装配图拆画零件图",
+              "children": [
+                {
+                  "name": "读装配图拆画零件图",
+                  "type": "note",
+                  "path": "机械制图及CAD基础/期末考试/读装配图拆画零件图",
+                  "pdf": "notes/机械制图及CAD基础/期末考试/读装配图拆画零件图/读装配图拆画零件图.pdf",
+                  "one": "notes/机械制图及CAD基础/期末考试/读装配图拆画零件图/读装配图拆画零件图.one",
+                  "pptx": null
+                }
+              ]
+            },
+            {
               "name": "样卷",
               "type": "folder",
               "path": "机械制图及CAD基础/期末考试/样卷",
@@ -192,46 +267,6 @@
                   "pptx": null
                 }
               ]
-            },
-            {
-              "name": "期末题型与个人期末回忆",
-              "type": "note",
-              "path": "机械制图及CAD基础/期末考试",
-              "pdf": "notes/机械制图及CAD基础/期末考试/期末题型与个人期末回忆.pdf",
-              "one": "notes/机械制图及CAD基础/期末考试/期末题型与个人期末回忆.one",
-              "pptx": null
-            },
-            {
-              "name": "尺寸标注",
-              "type": "note",
-              "path": "机械制图及CAD基础/期末考试",
-              "pdf": "notes/机械制图及CAD基础/期末考试/尺寸标注.pdf",
-              "one": "notes/机械制图及CAD基础/期末考试/尺寸标注.one",
-              "pptx": null
-            },
-            {
-              "name": "装配改错",
-              "type": "note",
-              "path": "机械制图及CAD基础/期末考试",
-              "pdf": "notes/机械制图及CAD基础/期末考试/装配改错.pdf",
-              "one": "notes/机械制图及CAD基础/期末考试/装配改错.one",
-              "pptx": null
-            },
-            {
-              "name": "读零件图，补画视图",
-              "type": "note",
-              "path": "机械制图及CAD基础/期末考试",
-              "pdf": "notes/机械制图及CAD基础/期末考试/读零件图，补画视图.pdf",
-              "one": "notes/机械制图及CAD基础/期末考试/读零件图，补画视图.one",
-              "pptx": null
-            },
-            {
-              "name": "读装配图拆画零件图",
-              "type": "note",
-              "path": "机械制图及CAD基础/期末考试",
-              "pdf": "notes/机械制图及CAD基础/期末考试/读装配图拆画零件图.pdf",
-              "one": "notes/机械制图及CAD基础/期末考试/读装配图拆画零件图.one",
-              "pptx": null
             }
           ]
         }
