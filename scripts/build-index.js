@@ -40,23 +40,25 @@ function scanDir (dirPath) {
   }
 
   // --- 配对 PDF / .one / .pptx ---
-  const pdfMap  = new Map()   // basename -> filename
-  const oneMap  = new Map()
-  const pptxMap = new Map()
+  const pdfMap    = new Map()   // basename -> filename
+  const oneMap    = new Map()
+  const pptxMap   = new Map()
+  const sldprtMap = new Map()
 
   for (const f of files) {
     const ext  = path.extname(f).toLowerCase()
     const base = path.basename(f, ext)
-    if (ext === '.pdf')  pdfMap.set(base, f)
-    if (ext === '.one')  oneMap.set(base, f)
-    if (ext === '.pptx') pptxMap.set(base, f)
+    if (ext === '.pdf')    pdfMap.set(base, f)
+    if (ext === '.one')    oneMap.set(base, f)
+    if (ext === '.pptx')   pptxMap.set(base, f)
+    if (ext === '.sldprt') sldprtMap.set(base, f)
   }
 
   const relDir = path.relative(NOTES_DIR, dirPath).replace(/\\/g, '/')
   const prefix = relDir ? 'notes/' + relDir + '/' : 'notes/'
 
   // 首先生成所有笔记节点
-  const allBases = new Set([...pdfMap.keys(), ...oneMap.keys()])
+  const allBases = new Set([...pdfMap.keys(), ...oneMap.keys(), ...pptxMap.keys(), ...sldprtMap.keys()])
   const notes = []
 
   for (const base of allBases) {
@@ -66,7 +68,8 @@ function scanDir (dirPath) {
       path: relDir,
       pdf:  pdfMap.has(base)  ? prefix + pdfMap.get(base)  : null,
       one:  oneMap.has(base)  ? prefix + oneMap.get(base)  : null,
-      pptx: pptxMap.has(base) ? prefix + pptxMap.get(base) : null
+      pptx:   pptxMap.has(base)   ? prefix + pptxMap.get(base)   : null,
+      sldprt: sldprtMap.has(base) ? prefix + sldprtMap.get(base) : null
     })
   }
 

@@ -15,6 +15,7 @@
   const noteTitle  = document.getElementById('noteTitle')
   const btnDownload = document.getElementById('btnDownload')
   const btnPptx     = document.getElementById('btnPptx')
+  const btnSldprt   = document.getElementById('btnSldprt')
   const prefaceNav  = document.getElementById('prefaceNav')
   const notifyNav   = document.getElementById('notifyNav')
   const updateLog   = document.getElementById('updateLog')
@@ -317,6 +318,7 @@
     noteTitle.textContent = '欢迎喵'
     btnDownload.style.display = 'none'
     if (btnPptx) btnPptx.style.display = 'none'
+    if (btnSldprt) btnSldprt.style.display = 'none'
     if (sidebarGif) sidebarGif.style.display = 'none'
     pdfViewer.innerHTML = WELCOME_HTML
     // 回退时默认隐藏，只显示背景
@@ -376,6 +378,15 @@
       btnPptx.download = node.name + '.pptx'
     } else if (btnPptx) {
       btnPptx.style.display = 'none'
+    }
+
+    // SLDPRT 下载按钮
+    if (node.sldprt && btnSldprt) {
+      btnSldprt.style.display = 'inline-flex'
+      btnSldprt.href = node.sldprt
+      btnSldprt.download = node.name + '.sldprt'
+    } else if (btnSldprt) {
+      btnSldprt.style.display = 'none'
     }
 
     // PDF 预览
