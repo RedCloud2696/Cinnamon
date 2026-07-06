@@ -101,13 +101,14 @@
     {
       "name": "身体素质课",
       "gpa": null,
-      "teacher": "张宇",
+      "teacher": "",
       "review": {
         "overview": "",
         "pros": "",
         "cons": ""
       },
-      "grading": ""
+      "grading": "",
+      "credit": "1.0"
     },
     {
       "name": "军训",
