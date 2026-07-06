@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T14:35:29.654Z",
+  "updated": "2026-07-06T14:36:12.712Z",
   "tree": [
     {
       "name": "大学物理（甲）Ⅰ",
@@ -164,15 +164,6 @@
               "pdf": "notes/机械制图及CAD基础/课堂PPT/总复习第二讲.pdf",
               "one": null,
               "pptx": "notes/机械制图及CAD基础/课堂PPT/总复习第二讲.pptx",
-              "sldprt": null
-            },
-            {
-              "name": "~$轴系装配结构设计",
-              "type": "note",
-              "path": "机械制图及CAD基础/课堂PPT",
-              "pdf": null,
-              "one": null,
-              "pptx": "notes/机械制图及CAD基础/课堂PPT/~$轴系装配结构设计.pptx",
               "sldprt": null
             }
           ]
