@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T12:10:44.295Z",
+  "updated": "2026-07-06T13:03:51.521Z",
   "tree": [
     {
       "name": "大学物理（甲）Ⅰ",
@@ -188,13 +188,13 @@
                   "sldprt": null
                 },
                 {
-                  "name": "建模.SLDPRT",
+                  "name": "题目整理（尺寸标注）",
                   "type": "note",
                   "path": "机械制图及CAD基础/期末考试/尺寸标注",
-                  "pdf": null,
-                  "one": null,
+                  "pdf": "notes/机械制图及CAD基础/期末考试/尺寸标注/题目整理（尺寸标注）.pdf",
+                  "one": "notes/机械制图及CAD基础/期末考试/尺寸标注/题目整理（尺寸标注）.one",
                   "pptx": null,
-                  "sldprt": "notes/机械制图及CAD基础/期末考试/尺寸标注/建模.SLDPRT"
+                  "sldprt": null
                 }
               ]
             },
@@ -204,20 +204,11 @@
               "path": "机械制图及CAD基础/期末考试/装配改错",
               "children": [
                 {
-                  "name": "参考答案",
+                  "name": "题目整理（装配改错）",
                   "type": "note",
                   "path": "机械制图及CAD基础/期末考试/装配改错",
-                  "pdf": null,
-                  "one": "notes/机械制图及CAD基础/期末考试/装配改错/参考答案.one",
-                  "pptx": null,
-                  "sldprt": null
-                },
-                {
-                  "name": "题目整理",
-                  "type": "note",
-                  "path": "机械制图及CAD基础/期末考试/装配改错",
-                  "pdf": "notes/机械制图及CAD基础/期末考试/装配改错/题目整理.pdf",
-                  "one": "notes/机械制图及CAD基础/期末考试/装配改错/题目整理.one",
+                  "pdf": "notes/机械制图及CAD基础/期末考试/装配改错/题目整理（装配改错）.pdf",
+                  "one": "notes/机械制图及CAD基础/期末考试/装配改错/题目整理（装配改错）.one",
                   "pptx": null,
                   "sldprt": null
                 },
