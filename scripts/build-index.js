@@ -152,17 +152,11 @@ function scanDir (dirPath) {
     })
   }
 
-  sortByOrder(folders)
-  sortByOrder(notes)
+  // 合并后统一排序，保证笔记和文件夹按 order 交叉排列
+  const allItems = [...folders, ...notes]
+  sortByOrder(allItems)
 
-  // 对每个笔记的子节点也应用排序
-
-  // 对每个笔记的子节点也应用排序
-  for (const n of notes) {
-    if (n.children) sortByOrder(n.children)
-  }
-
-  return [...folders, ...notes]
+  return allItems
 }
 
 // 计算两个字符串的公共前缀长度（字符级别，忽略扩展名差异）
