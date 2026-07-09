@@ -288,7 +288,6 @@
         <div class="update-log-title"><img class="update-log-icon" src="素材/Last_Prism.png" alt=""> 更新通知</div>
         <ul class="update-log-list">
           <li><span class="update-date">07-06</span> 期末考试扩充：新增题目整理、参考答案分区，支持 SLDPRT 模型下载</li>
-          <li><span class="update-date">07-04</span> 学期回顾页面上线：支持按学期折叠、教师搜索、绩点点击显示、折叠动画</li>
           <li><span class="update-date">07-03</span> 期末题型扩展为「期末题型与个人期末回忆」，新增个人考试复盘</li>
           <li><span class="update-date">07-02</span> 笔记更正（尺寸标注）：盲孔螺纹标注——粗牙与细牙普通螺纹的区别修正</li>
           <li><span class="update-date">07-01</span> 笔记补充（读零件图补画视图）：极限与配合——间隙配合、过渡配合、过盈配合</li>
