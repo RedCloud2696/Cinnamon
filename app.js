@@ -17,8 +17,6 @@
   const btnPptx     = document.getElementById('btnPptx')
   const btnSldprt   = document.getElementById('btnSldprt')
   const prefaceNav  = document.getElementById('prefaceNav')
-  const notifyNav   = document.getElementById('notifyNav')
-  const updateLog   = document.getElementById('updateLog')
   const sidebarGif  = document.getElementById('sidebarGif')
   const backToTop   = document.getElementById('backToTop')
 
@@ -283,34 +281,14 @@
         </div>
       </div>
 
-      <!-- 更新通知栏（独立于序言面板） -->
-      <div class="update-log" id="updateLog">
-        <div class="update-log-title"><img class="update-log-icon" src="素材/Last_Prism.png" alt=""> 更新通知</div>
-        <ul class="update-log-list">
-          <li><span class="update-date">07-09</span> 下架学期回顾页面</li>
-          <li><span class="update-date">07-06</span> 期末考试扩充：新增题目整理分区</li>
-          <li><span class="update-date">07-03</span> 期末题型扩展为「期末题型与个人期末回忆」，新增个人考试复盘</li>
-          <li><span class="update-date">07-02</span> 笔记更正（尺寸标注）：盲孔螺纹标注——粗牙与细牙普通螺纹的区别修正</li>
-          <li><span class="update-date">07-01</span> 笔记补充（读零件图补画视图）：极限与配合——间隙配合、过渡配合、过盈配合</li>
-          <li><span class="update-date">07-01</span> 机械制图及CAD基础 竣工</li>
-          <li><span class="update-date">07-01</span> 新增留言区（giscus）</li>
-          <li><span class="update-date">06-30</span> 上线课堂 PPT 支持（.pptx 下载）</li>
-          <li><span class="update-date">06-29</span> 网站上线，首批笔记：普化实验、大物Ⅰ</li>
-        </ul>
-      </div>
-
-
-
-
       <p class="welcome-counter">
         <span id="busuanzi_container_site_uv">被 <span id="busuanzi_value_site_uv"></span> 人浏览过</span>
       </p>
     </div>`
 
   // --- 恢复欢迎区 ---
-  // 序言 / 通知 面板是否可见
+  // 序言面板是否可见
   let prefaceVisible = false
-  let notifyVisible  = false
 
   function resetToWelcome () {
     activePath = null
@@ -324,7 +302,6 @@
     pdfViewer.innerHTML = WELCOME_HTML
     // 回退时默认隐藏，只显示背景
     setPrefaceVisible(false)
-    setNotifyVisible(false)
     renderTree(searchEl.value)
   }
 
@@ -341,21 +318,6 @@
     if (panel) {
       panel.style.display = show ? '' : 'none'
     }
-  }
-
-  function setNotifyVisible (show) {
-    notifyVisible = show
-    const el = document.getElementById('updateLog')
-    if (el) el.style.display = show ? '' : 'none'
-    // 通知图标状态切换
-    const icon = notifyNav.querySelector('img')
-    if (icon) {
-      icon.style.filter = show ? 'brightness(1.2) drop-shadow(0 0 3px rgba(254,151,151,.5))' : ''
-    }
-  }
-
-  function toggleNotify () {
-    setNotifyVisible(!notifyVisible)
   }
 
   // --- 选中笔记 ---
@@ -508,21 +470,11 @@
 
   // --- 启动 ---
   // 侧边栏「序言」→ 切换文字面板
-  // 侧边栏「通知」→ 切换更新日志（互斥：关闭序言）
-  notifyNav.addEventListener('click', function () {
-    if (activePath) resetToWelcome()
-    if (prefaceVisible) setPrefaceVisible(false)
-    toggleNotify()
-    if (window.innerWidth <= 768) closeSidebar()
-  })
-
-  // 侧边栏「序言」→ 切换文字面板（互斥：关闭通知）
   prefaceNav.addEventListener('click', function () {
     if (activePath) {
       resetToWelcome()
       setPrefaceVisible(true)
     } else {
-      if (notifyVisible) setNotifyVisible(false)
       togglePreface()
     }
     if (window.innerWidth <= 768) closeSidebar()
