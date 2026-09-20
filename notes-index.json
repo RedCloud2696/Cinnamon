@@ -1,22 +1,6 @@
 {
-  "updated": "2026-09-20T11:25:27.179Z",
+  "updated": "2026-09-20T12:43:07.185Z",
   "tree": [
-    {
-      "name": "大学物理（甲）Ⅰ",
-      "type": "folder",
-      "path": "大学物理（甲）Ⅰ",
-      "children": [
-        {
-          "name": "公式整理（面向期末，未完全覆盖大物Ⅰ）",
-          "type": "note",
-          "path": "大学物理（甲）Ⅰ",
-          "pdf": "notes/大学物理（甲）Ⅰ/公式整理（面向期末，未完全覆盖大物Ⅰ）.pdf",
-          "one": "notes/大学物理（甲）Ⅰ/公式整理（面向期末，未完全覆盖大物Ⅰ）.one",
-          "pptx": null,
-          "sldprt": null
-        }
-      ]
-    },
     {
       "name": "机械制图及CAD基础",
       "type": "folder",
@@ -169,39 +153,39 @@
           ]
         },
         {
-          "name": "期末考试",
+          "name": "备考和题目整理",
           "type": "folder",
-          "path": "机械制图及CAD基础/期末考试",
+          "path": "机械制图及CAD基础/备考和题目整理",
           "children": [
             {
               "name": "期末题型与个人期末回忆",
               "type": "note",
-              "path": "机械制图及CAD基础/期末考试",
-              "pdf": "notes/机械制图及CAD基础/期末考试/期末题型与个人期末回忆.pdf",
-              "one": "notes/机械制图及CAD基础/期末考试/期末题型与个人期末回忆.one",
+              "path": "机械制图及CAD基础/备考和题目整理",
+              "pdf": "notes/机械制图及CAD基础/备考和题目整理/期末题型与个人期末回忆.pdf",
+              "one": "notes/机械制图及CAD基础/备考和题目整理/期末题型与个人期末回忆.one",
               "pptx": null,
               "sldprt": null
             },
             {
               "name": "尺寸标注",
               "type": "folder",
-              "path": "机械制图及CAD基础/期末考试/尺寸标注",
+              "path": "机械制图及CAD基础/备考和题目整理/尺寸标注",
               "children": [
                 {
                   "name": "尺寸标注-笔记",
                   "type": "note",
-                  "path": "机械制图及CAD基础/期末考试/尺寸标注",
-                  "pdf": "notes/机械制图及CAD基础/期末考试/尺寸标注/尺寸标注-笔记.pdf",
-                  "one": "notes/机械制图及CAD基础/期末考试/尺寸标注/尺寸标注-笔记.one",
+                  "path": "机械制图及CAD基础/备考和题目整理/尺寸标注",
+                  "pdf": "notes/机械制图及CAD基础/备考和题目整理/尺寸标注/尺寸标注-笔记.pdf",
+                  "one": "notes/机械制图及CAD基础/备考和题目整理/尺寸标注/尺寸标注-笔记.one",
                   "pptx": null,
                   "sldprt": null
                 },
                 {
                   "name": "题目整理（尺寸标注）",
                   "type": "note",
-                  "path": "机械制图及CAD基础/期末考试/尺寸标注",
-                  "pdf": "notes/机械制图及CAD基础/期末考试/尺寸标注/题目整理（尺寸标注）.pdf",
-                  "one": "notes/机械制图及CAD基础/期末考试/尺寸标注/题目整理（尺寸标注）.one",
+                  "path": "机械制图及CAD基础/备考和题目整理/尺寸标注",
+                  "pdf": "notes/机械制图及CAD基础/备考和题目整理/尺寸标注/题目整理（尺寸标注）.pdf",
+                  "one": "notes/机械制图及CAD基础/备考和题目整理/尺寸标注/题目整理（尺寸标注）.one",
                   "pptx": null,
                   "sldprt": null
                 }
@@ -210,23 +194,23 @@
             {
               "name": "装配改错",
               "type": "folder",
-              "path": "机械制图及CAD基础/期末考试/装配改错",
+              "path": "机械制图及CAD基础/备考和题目整理/装配改错",
               "children": [
                 {
                   "name": "装配改错-笔记",
                   "type": "note",
-                  "path": "机械制图及CAD基础/期末考试/装配改错",
-                  "pdf": "notes/机械制图及CAD基础/期末考试/装配改错/装配改错-笔记.pdf",
-                  "one": "notes/机械制图及CAD基础/期末考试/装配改错/装配改错-笔记.one",
+                  "path": "机械制图及CAD基础/备考和题目整理/装配改错",
+                  "pdf": "notes/机械制图及CAD基础/备考和题目整理/装配改错/装配改错-笔记.pdf",
+                  "one": "notes/机械制图及CAD基础/备考和题目整理/装配改错/装配改错-笔记.one",
                   "pptx": null,
                   "sldprt": null
                 },
                 {
                   "name": "题目整理（装配改错）",
                   "type": "note",
-                  "path": "机械制图及CAD基础/期末考试/装配改错",
-                  "pdf": "notes/机械制图及CAD基础/期末考试/装配改错/题目整理（装配改错）.pdf",
-                  "one": "notes/机械制图及CAD基础/期末考试/装配改错/题目整理（装配改错）.one",
+                  "path": "机械制图及CAD基础/备考和题目整理/装配改错",
+                  "pdf": "notes/机械制图及CAD基础/备考和题目整理/装配改错/题目整理（装配改错）.pdf",
+                  "one": "notes/机械制图及CAD基础/备考和题目整理/装配改错/题目整理（装配改错）.one",
                   "pptx": null,
                   "sldprt": null
                 }
@@ -235,14 +219,14 @@
             {
               "name": "读零件图，补画视图",
               "type": "folder",
-              "path": "机械制图及CAD基础/期末考试/读零件图，补画视图",
+              "path": "机械制图及CAD基础/备考和题目整理/读零件图，补画视图",
               "children": [
                 {
                   "name": "读零件图，补画视图-笔记",
                   "type": "note",
-                  "path": "机械制图及CAD基础/期末考试/读零件图，补画视图",
-                  "pdf": "notes/机械制图及CAD基础/期末考试/读零件图，补画视图/读零件图，补画视图-笔记.pdf",
-                  "one": "notes/机械制图及CAD基础/期末考试/读零件图，补画视图/读零件图，补画视图-笔记.one",
+                  "path": "机械制图及CAD基础/备考和题目整理/读零件图，补画视图",
+                  "pdf": "notes/机械制图及CAD基础/备考和题目整理/读零件图，补画视图/读零件图，补画视图-笔记.pdf",
+                  "one": "notes/机械制图及CAD基础/备考和题目整理/读零件图，补画视图/读零件图，补画视图-笔记.one",
                   "pptx": null,
                   "sldprt": null
                 }
@@ -251,14 +235,14 @@
             {
               "name": "读装配图拆画零件图",
               "type": "folder",
-              "path": "机械制图及CAD基础/期末考试/读装配图拆画零件图",
+              "path": "机械制图及CAD基础/备考和题目整理/读装配图拆画零件图",
               "children": [
                 {
                   "name": "读装配图拆画零件图-笔记",
                   "type": "note",
-                  "path": "机械制图及CAD基础/期末考试/读装配图拆画零件图",
-                  "pdf": "notes/机械制图及CAD基础/期末考试/读装配图拆画零件图/读装配图拆画零件图-笔记.pdf",
-                  "one": "notes/机械制图及CAD基础/期末考试/读装配图拆画零件图/读装配图拆画零件图-笔记.one",
+                  "path": "机械制图及CAD基础/备考和题目整理/读装配图拆画零件图",
+                  "pdf": "notes/机械制图及CAD基础/备考和题目整理/读装配图拆画零件图/读装配图拆画零件图-笔记.pdf",
+                  "one": "notes/机械制图及CAD基础/备考和题目整理/读装配图拆画零件图/读装配图拆画零件图-笔记.one",
                   "pptx": null,
                   "sldprt": null
                 }
@@ -267,13 +251,13 @@
             {
               "name": "样卷",
               "type": "folder",
-              "path": "机械制图及CAD基础/期末考试/样卷",
+              "path": "机械制图及CAD基础/备考和题目整理/样卷",
               "children": [
                 {
                   "name": "17-18 夏 机械制图及CAD（答案1）",
                   "type": "note",
-                  "path": "机械制图及CAD基础/期末考试/样卷",
-                  "pdf": "notes/机械制图及CAD基础/期末考试/样卷/17-18 夏 机械制图及CAD（答案1）.pdf",
+                  "path": "机械制图及CAD基础/备考和题目整理/样卷",
+                  "pdf": "notes/机械制图及CAD基础/备考和题目整理/样卷/17-18 夏 机械制图及CAD（答案1）.pdf",
                   "one": null,
                   "pptx": null,
                   "sldprt": null
@@ -281,8 +265,8 @@
                 {
                   "name": "17-18 夏 机械制图及CAD（答案2）",
                   "type": "note",
-                  "path": "机械制图及CAD基础/期末考试/样卷",
-                  "pdf": "notes/机械制图及CAD基础/期末考试/样卷/17-18 夏 机械制图及CAD（答案2）.pdf",
+                  "path": "机械制图及CAD基础/备考和题目整理/样卷",
+                  "pdf": "notes/机械制图及CAD基础/备考和题目整理/样卷/17-18 夏 机械制图及CAD（答案2）.pdf",
                   "one": null,
                   "pptx": null,
                   "sldprt": null
@@ -290,8 +274,8 @@
                 {
                   "name": "17-18 夏 机械制图及CAD（样卷）",
                   "type": "note",
-                  "path": "机械制图及CAD基础/期末考试/样卷",
-                  "pdf": "notes/机械制图及CAD基础/期末考试/样卷/17-18 夏 机械制图及CAD（样卷）.pdf",
+                  "path": "机械制图及CAD基础/备考和题目整理/样卷",
+                  "pdf": "notes/机械制图及CAD基础/备考和题目整理/样卷/17-18 夏 机械制图及CAD（样卷）.pdf",
                   "one": null,
                   "pptx": null,
                   "sldprt": null
@@ -308,148 +292,252 @@
       "path": "普通化学实验（乙）",
       "children": [
         {
-          "name": "普通化学实验（乙）-汇总",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": null,
-          "one": "notes/普通化学实验（乙）/普通化学实验（乙）-汇总.one",
-          "pptx": null,
-          "sldprt": null
+          "name": "讲义",
+          "type": "folder",
+          "path": "普通化学实验（乙）/讲义",
+          "children": [
+            {
+              "name": "汇总",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": null,
+              "one": "notes/普通化学实验（乙）/讲义/汇总.one",
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "定量分析注意事项",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/定量分析注意事项.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "解热镇痛药阿司匹林的制备和提纯",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/解热镇痛药阿司匹林的制备和提纯.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "量气法测定摩尔气体常数",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/量气法测定摩尔气体常数.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "三草酸合铁(III)酸钾的制备及蓝晒法实验",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/三草酸合铁(III)酸钾的制备及蓝晒法实验.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "乙酸解离度及解离常数的测定（pH法）",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/乙酸解离度及解离常数的测定（pH法）.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "酸碱溶液配制及酸碱互滴",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/酸碱溶液配制及酸碱互滴.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "全透明工艺皂的制备",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/全透明工艺皂的制备.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "电镀铜",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/电镀铜.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "镇痛药百服宁、散利痛的薄层色谱分析",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/镇痛药百服宁、散利痛的薄层色谱分析.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "阿司匹林的纯度分析（熔点及含量测定）",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/阿司匹林的纯度分析（熔点及含量测定）.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "化学反应速率和活化能的测定（碘时钟）",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/化学反应速率和活化能的测定（碘时钟）.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "电位分析法测定茶叶中氟含量",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/电位分析法测定茶叶中氟含量.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "分光光度法测定乙酰水杨酸中的残留水杨酸",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/分光光度法测定乙酰水杨酸中的残留水杨酸.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "果蔬中维生素C含量的测定",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/果蔬中维生素C含量的测定.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "其他",
+              "type": "note",
+              "path": "普通化学实验（乙）/讲义",
+              "pdf": "notes/普通化学实验（乙）/讲义/其他.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            }
+          ]
         },
         {
-          "name": "定量分析注意事项",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/定量分析注意事项.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
-        },
-        {
-          "name": "解热镇痛药阿司匹林的制备和提纯",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/解热镇痛药阿司匹林的制备和提纯.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
-        },
-        {
-          "name": "量气法测定摩尔气体常数",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/量气法测定摩尔气体常数.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
-        },
-        {
-          "name": "三草酸合铁(III)酸钾的制备及蓝晒法实验",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/三草酸合铁(III)酸钾的制备及蓝晒法实验.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
-        },
-        {
-          "name": "乙酸解离度及解离常数的测定（pH法）",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/乙酸解离度及解离常数的测定（pH法）.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
-        },
-        {
-          "name": "酸碱溶液配制及酸碱互滴",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/酸碱溶液配制及酸碱互滴.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
-        },
-        {
-          "name": "全透明工艺皂的制备",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/全透明工艺皂的制备.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
-        },
-        {
-          "name": "电镀铜",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/电镀铜.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
-        },
-        {
-          "name": "镇痛药百服宁、散利痛的薄层色谱分析",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/镇痛药百服宁、散利痛的薄层色谱分析.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
-        },
-        {
-          "name": "阿司匹林的纯度分析（熔点及含量测定）",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/阿司匹林的纯度分析（熔点及含量测定）.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
-        },
-        {
-          "name": "化学反应速率和活化能的测定（碘时钟）",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/化学反应速率和活化能的测定（碘时钟）.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
-        },
-        {
-          "name": "电位分析法测定茶叶中氟含量",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/电位分析法测定茶叶中氟含量.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
-        },
-        {
-          "name": "分光光度法测定乙酰水杨酸中的残留水杨酸",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/分光光度法测定乙酰水杨酸中的残留水杨酸.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
-        },
-        {
-          "name": "果蔬中维生素C含量的测定",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/果蔬中维生素C含量的测定.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
-        },
-        {
-          "name": "其他",
-          "type": "note",
-          "path": "普通化学实验（乙）",
-          "pdf": "notes/普通化学实验（乙）/其他.pdf",
-          "one": null,
-          "pptx": null,
-          "sldprt": null
+          "name": "实验报告",
+          "type": "folder",
+          "path": "普通化学实验（乙）/实验报告",
+          "children": [
+            {
+              "name": "量气法测定摩尔气体常数",
+              "type": "note",
+              "path": "普通化学实验（乙）/实验报告",
+              "pdf": "notes/普通化学实验（乙）/实验报告/量气法测定摩尔气体常数.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "三草酸合铁(III)酸钾的制备及蓝晒法实验",
+              "type": "note",
+              "path": "普通化学实验（乙）/实验报告",
+              "pdf": "notes/普通化学实验（乙）/实验报告/三草酸合铁(III)酸钾的制备及蓝晒法实验.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "乙酸解离度及解离常数的测定（pH法）",
+              "type": "note",
+              "path": "普通化学实验（乙）/实验报告",
+              "pdf": "notes/普通化学实验（乙）/实验报告/乙酸解离度及解离常数的测定（pH法）.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "酸碱溶液配制及酸碱互滴",
+              "type": "note",
+              "path": "普通化学实验（乙）/实验报告",
+              "pdf": "notes/普通化学实验（乙）/实验报告/酸碱溶液配制及酸碱互滴.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "全透明工艺皂的制备",
+              "type": "note",
+              "path": "普通化学实验（乙）/实验报告",
+              "pdf": "notes/普通化学实验（乙）/实验报告/全透明工艺皂的制备.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "电镀铜",
+              "type": "note",
+              "path": "普通化学实验（乙）/实验报告",
+              "pdf": "notes/普通化学实验（乙）/实验报告/电镀铜.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "镇痛药百服宁、散利痛的薄层色谱分析",
+              "type": "note",
+              "path": "普通化学实验（乙）/实验报告",
+              "pdf": "notes/普通化学实验（乙）/实验报告/镇痛药百服宁、散利痛的薄层色谱分析.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "阿司匹林的纯度分析（熔点及含量测定）",
+              "type": "note",
+              "path": "普通化学实验（乙）/实验报告",
+              "pdf": "notes/普通化学实验（乙）/实验报告/阿司匹林的纯度分析（熔点及含量测定）.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "化学反应速率和活化能的测定（碘时钟）",
+              "type": "note",
+              "path": "普通化学实验（乙）/实验报告",
+              "pdf": "notes/普通化学实验（乙）/实验报告/化学反应速率和活化能的测定（碘时钟）.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            },
+            {
+              "name": "电位分析法测定茶叶中氟含量",
+              "type": "note",
+              "path": "普通化学实验（乙）/实验报告",
+              "pdf": "notes/普通化学实验（乙）/实验报告/电位分析法测定茶叶中氟含量.pdf",
+              "one": null,
+              "pptx": null,
+              "sldprt": null
+            }
+          ]
         }
       ]
     }

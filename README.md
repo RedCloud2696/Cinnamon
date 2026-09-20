@@ -58,7 +58,7 @@ npx serve .                   # 启动本地服务器
 
 | 文件 | 用途 |
 |------|------|
-| `index.html` | 首页（单页应用，含序言、通知与笔记浏览） |
+| `index.html` | 首页（单页应用，含序言与笔记浏览） |
 | `comments.html` | 留言区页面（giscus） |
 | `style.css` | 样式 |
 | `app.js` | 前端逻辑 |
@@ -72,5 +72,5 @@ npx serve .                   # 启动本地服务器
 ## 注意事项
 
 - `notes/` 下的文件由 GitHub Pages 直接托管，**不要启用 Git LFS**——Pages 无法读取 LFS 指针文件，会导致下载按钮失效。
-- 单个文件不得超过 GitHub 的 100 MB 硬限制（目前最大的是 `普通化学实验（乙）-汇总.one`，约 83 MB）。
+- 单个文件不得超过 GitHub 的 100 MB 硬限制（目前最大的是 `notes/普通化学实验（乙）/讲义/汇总.one`，约 83 MB）。
 - 每次推送后 Actions 会重写 `notes-index.json`；本地推送被拒时先 `git pull --rebase` 再推。
