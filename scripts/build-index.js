@@ -171,9 +171,27 @@ function main () {
     fs.mkdirSync(NOTES_DIR, { recursive: true })
   }
   const tree = scanDir(NOTES_DIR)
-  const output = { updated: new Date().toISOString(), tree }
+
+  // 内容没变就沿用上一次的 updated，避免每次推送都产生一个只有时间戳变化的提交
+  let updated = new Date().toISOString()
+  let changed = true
+  if (fs.existsSync(OUT_FILE)) {
+    try {
+      const prev = JSON.parse(fs.readFileSync(OUT_FILE, 'utf-8'))
+      if (prev.updated && JSON.stringify(prev.tree) === JSON.stringify(tree)) {
+        updated = prev.updated
+        changed = false
+      }
+    } catch (_) { /* 旧文件损坏则直接重写 */ }
+  }
+
+  const output = { updated, tree }
   fs.writeFileSync(OUT_FILE, JSON.stringify(output, null, 2), 'utf-8')
-  console.log(`✅ notes-index.json 已生成 — ${tree.length} 个顶层节点`)
+  console.log(
+    changed
+      ? `✅ notes-index.json 已生成 — ${tree.length} 个顶层节点`
+      : `✅ notes-index.json 无变化 — ${tree.length} 个顶层节点`
+  )
 }
 
 main()
