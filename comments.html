@@ -8,43 +8,86 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .comments-page {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto;
-      padding: 40px 20px 60px;
+      padding: 40px 20px 64px;
     }
+
+    /* 背景图 + 暖色柔光，和主页同一套观感 */
     body {
-      background: #FFFBF7 url('images/索琳.png') no-repeat center/cover fixed;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(255, 251, 247, .18), rgba(255, 251, 247, .46)),
+        url('images/索琳.png') center / cover no-repeat fixed;
     }
-    .comments-page .giscus {
-      background: rgba(255, 251, 247, 0.78);
-      border-radius: 12px;
-      padding: 20px 24px;
-    }
+
+    /* 返回：胶囊按钮 */
     .comments-page .back-link {
-      display: inline-block;
-      margin-bottom: 24px;
-      font-size: .9rem;
-      color: #B0A0A0;
-      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 22px;
+      padding: 8px 16px;
+      font-size: .85rem;
+      color: var(--heading);
+      background: rgba(255, 251, 247, .82);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--r-full);
+      box-shadow: var(--shadow-sm);
+      transition: color .25s var(--ease),
+                  transform .2s var(--ease),
+                  box-shadow .25s var(--ease);
     }
-    .comments-page .back-link:hover { color: var(--accent); }
+
+    .comments-page .back-link:hover {
+      color: var(--accent-700);
+      transform: translateX(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* 说明卡片 */
     .comments-info {
-      background: linear-gradient(rgba(255,238,236,.8), rgba(255,238,236,.8)), url('素材/索琳营帐.png');
-      background-size: cover;
-      background-position: center;
-      border-radius: 12px;
-      padding: 24px 28px;
-      margin-bottom: 32px;
+      padding: 26px 30px;
+      margin-bottom: 30px;
       font-size: .9rem;
-      color: #8B7B7B;
-      line-height: 1.8;
-      text-shadow: 0 0 6px rgba(255,251,247,.8);
+      line-height: 1.85;
+      color: #6E5B5B;
+      border-radius: var(--r-lg);
+      border: 1px solid var(--border-glass);
+      box-shadow: var(--shadow-md);
+      background:
+        linear-gradient(rgba(255, 249, 247, .94), rgba(255, 244, 242, .94)),
+        url('素材/索琳营帐.png') center / cover no-repeat;
     }
+
     .comments-info strong {
       color: var(--heading);
+      font-weight: 700;
     }
+
     .comments-info a {
-      color: var(--accent);
+      color: var(--accent-800);
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: color .25s var(--ease);
+    }
+
+    .comments-info a:hover { color: var(--accent-900); }
+
+    /* giscus 容器 */
+    .comments-page .giscus {
+      padding: 1rem;
+      overflow: hidden;
+      background: rgba(255, 251, 247, .90);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--r-lg);
+      box-shadow: var(--shadow-md);
     }
   </style>
 </head>
